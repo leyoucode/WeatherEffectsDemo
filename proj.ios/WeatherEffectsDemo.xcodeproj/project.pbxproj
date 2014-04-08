@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01AEA83318F3EE1C00F10C4F /* RainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA83118F3EE1C00F10C4F /* RainScene.cpp */; };
+		01AEA83318F3EE1C00F10C4F /* ThunderShower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */; };
 		01AEA84418F3F2B300F10C4F /* fog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83C18F3F2B300F10C4F /* fog.plist */; };
 		01AEA84518F3F2B300F10C4F /* fog.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83D18F3F2B300F10C4F /* fog.png */; };
 		01AEA84618F3F2B300F10C4F /* light1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83E18F3F2B300F10C4F /* light1.plist */; };
@@ -311,8 +311,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AEA83118F3EE1C00F10C4F /* RainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RainScene.cpp; path = ../Classes/RainScene.cpp; sourceTree = "<group>"; };
-		01AEA83218F3EE1C00F10C4F /* RainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RainScene.h; path = ../Classes/RainScene.h; sourceTree = "<group>"; };
+		01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThunderShower.cpp; path = ../Classes/ThunderShower.cpp; sourceTree = "<group>"; };
+		01AEA83218F3EE1C00F10C4F /* ThunderShower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThunderShower.h; path = ../Classes/ThunderShower.h; sourceTree = "<group>"; };
 		01AEA83C18F3F2B300F10C4F /* fog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fog.plist; sourceTree = "<group>"; };
 		01AEA83D18F3F2B300F10C4F /* fog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fog.png; sourceTree = "<group>"; };
 		01AEA83E18F3F2B300F10C4F /* light1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = light1.plist; sourceTree = "<group>"; };
@@ -1399,8 +1399,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				01AEA83118F3EE1C00F10C4F /* RainScene.cpp */,
-				01AEA83218F3EE1C00F10C4F /* RainScene.h */,
+				01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */,
+				01AEA83218F3EE1C00F10C4F /* ThunderShower.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -2206,7 +2206,7 @@
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
-				01AEA83318F3EE1C00F10C4F /* RainScene.cpp in Sources */,
+				01AEA83318F3EE1C00F10C4F /* ThunderShower.cpp in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,
 				15A3D99A1682F7F9002FB0C5 /* cpGearJoint.c in Sources */,

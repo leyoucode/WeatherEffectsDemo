@@ -3,7 +3,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#include "RainScene.h"
+#include "ThunderShower.h"
 
 @implementation AppController
 
@@ -67,7 +67,7 @@ static AppDelegate s_sharedApplication;
 -(void) btnClick
 {
     NSLog(@"OK OK");
-    cocos2d::CCScene *scene = RainScene::scene();
+    cocos2d::CCScene *scene = ThunderShower::scene();
     cocos2d::CCDirector::sharedDirector()->replaceScene(cocos2d::CCTransitionCrossFade::create(1.2f, scene));
     
 }
