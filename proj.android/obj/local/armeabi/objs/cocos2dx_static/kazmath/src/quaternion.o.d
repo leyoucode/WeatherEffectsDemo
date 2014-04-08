@@ -1,16 +1,16 @@
 obj/local/armeabi/objs/cocos2dx_static/kazmath/src/quaternion.o: \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/src/quaternion.c \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/src/quaternion.c \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/utility.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformMacros.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/include/ccConfig.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/utility.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformMacros.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/types.h \
@@ -33,10 +33,10 @@ obj/local/armeabi/objs/cocos2dx_static/kazmath/src/quaternion.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/limits.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/mat3.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/utility.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/vec3.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/quaternion.h
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/mat3.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/utility.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/vec3.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/quaternion.h
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h:
 
@@ -48,17 +48,17 @@ obj/local/armeabi/objs/cocos2dx_static/kazmath/src/quaternion.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/utility.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/utility.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformMacros.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformMacros.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/include/ccConfig.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
 
@@ -104,10 +104,10 @@ obj/local/armeabi/objs/cocos2dx_static/kazmath/src/quaternion.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/mat3.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/mat3.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/utility.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/utility.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/vec3.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/vec3.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/kazmath/include/kazmath/quaternion.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/kazmath/include/kazmath/quaternion.h:

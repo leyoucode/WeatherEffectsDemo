@@ -1,5 +1,5 @@
 obj/local/armeabi/objs/chipmunk_static/src/cpSpace.o: \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/src/cpSpace.c \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/src/cpSpace.c \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -19,8 +19,8 @@ obj/local/armeabi/objs/chipmunk_static/src/cpSpace.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/string.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/malloc.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk_private.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk_private.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h \
@@ -33,26 +33,26 @@ obj/local/armeabi/objs/chipmunk_static/src/cpSpace.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/limits.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk_types.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpVect.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpBB.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpSpatialIndex.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpBody.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpShape.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpPolyShape.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpArbiter.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpConstraint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpPinJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpSpace.h
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk_types.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpVect.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpBB.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpSpatialIndex.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpBody.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpShape.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpPolyShape.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpArbiter.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpConstraint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpSpace.h
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h:
 
@@ -92,9 +92,9 @@ obj/local/armeabi/objs/chipmunk_static/src/cpSpace.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/malloc.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk_private.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk_private.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h:
 
@@ -120,42 +120,42 @@ obj/local/armeabi/objs/chipmunk_static/src/cpSpace.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/chipmunk_types.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/chipmunk_types.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpVect.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpVect.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpBB.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpBB.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpSpatialIndex.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpSpatialIndex.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpBody.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpBody.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpShape.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpShape.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpPolyShape.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpPolyShape.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpArbiter.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpArbiter.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpConstraint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpConstraint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpPinJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../external/chipmunk/include/chipmunk/cpSpace.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/external/chipmunk/include/chipmunk/cpSpace.h:

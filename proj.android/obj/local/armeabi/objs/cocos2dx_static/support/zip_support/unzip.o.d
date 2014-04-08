@@ -1,5 +1,5 @@
 obj/local/armeabi/objs/cocos2dx_static/support/zip_support/unzip.o: \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/zip_support/unzip.cpp \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/zip_support/unzip.cpp \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -24,11 +24,11 @@ obj/local/armeabi/objs/cocos2dx_static/support/zip_support/unzip.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/zlib.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/zconf.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/zip_support/unzip.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/zip_support/unzip.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/zip_support/ioapi.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/zip_support/ioapi.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/errno.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/errno.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/errno.h \
@@ -83,15 +83,15 @@ obj/local/armeabi/objs/cocos2dx_static/support/zip_support/unzip.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/zconf.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/zip_support/unzip.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/zip_support/unzip.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/zip_support/ioapi.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/zip_support/ioapi.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/errno.h:
 

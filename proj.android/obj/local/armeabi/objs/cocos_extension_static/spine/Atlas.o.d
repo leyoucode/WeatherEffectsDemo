@@ -1,11 +1,11 @@
 obj/local/armeabi/objs/cocos_extension_static/spine/Atlas.o: \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Atlas.cpp \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Atlas.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Atlas.cpp \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Atlas.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/ctype.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/extension.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/extension.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/string.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/malloc.h \
@@ -25,19 +25,19 @@ obj/local/armeabi/objs/cocos_extension_static/spine/Atlas.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Skeleton.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/SkeletonData.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/BoneData.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/SlotData.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Skin.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Attachment.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Animation.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Slot.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Bone.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/RegionAttachment.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/AttachmentLoader.h
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Skeleton.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/SkeletonData.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/BoneData.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/SlotData.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Skin.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Attachment.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Animation.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Slot.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Bone.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/RegionAttachment.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/AttachmentLoader.h
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Atlas.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Atlas.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/ctype.h:
 
@@ -47,7 +47,7 @@ obj/local/armeabi/objs/cocos_extension_static/spine/Atlas.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/extension.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/extension.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h:
 
@@ -87,24 +87,24 @@ obj/local/armeabi/objs/cocos_extension_static/spine/Atlas.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Skeleton.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Skeleton.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/SkeletonData.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/SkeletonData.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/BoneData.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/BoneData.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/SlotData.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/SlotData.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Skin.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Skin.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Attachment.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Attachment.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Animation.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Animation.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Slot.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Slot.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/Bone.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/Bone.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/RegionAttachment.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/RegionAttachment.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../extensions/spine/AttachmentLoader.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/extensions/spine/AttachmentLoader.h:

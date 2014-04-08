@@ -1,5 +1,5 @@
 obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/base64.cpp \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/base64.cpp \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -22,7 +22,7 @@ obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/base64.h
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/base64.h
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h:
 
@@ -68,4 +68,4 @@ obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/projects/WeatherEffectsDemo/proj.android/../../../cocos2dx/support/base64.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/base64.h:
