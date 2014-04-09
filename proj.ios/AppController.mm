@@ -3,7 +3,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#include "ThunderShower.h"
+#import "WeatherEffectsUtils.h"
 
 @implementation AppController
 
@@ -29,15 +29,6 @@ static AppDelegate s_sharedApplication;
                                    multiSampling: NO
                                  numberOfSamples: 0];
 
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame = CGRectMake(100, 100, 100, 50);
-    [btn setTitle:@"Test" forState:UIControlStateNormal];
-    //    [btn setTitleColor:<#(UIColor *)#> forState:<#(UIControlState)#>]
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [__glView addSubview:btn];
-
-    
     // Use RootViewController manage EAGLView 
     viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     viewController.wantsFullScreenLayout = YES;
@@ -55,6 +46,10 @@ static AppDelegate s_sharedApplication;
         [window setRootViewController:viewController];
     }
     
+    
+    [self addTestButtons];
+    
+    
     [window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarHidden:true];
@@ -64,13 +59,57 @@ static AppDelegate s_sharedApplication;
     return YES;
 }
 
--(void) btnClick
-{
-    NSLog(@"OK OK");
-    cocos2d::CCScene *scene = ThunderShower::scene();
-    cocos2d::CCDirector::sharedDirector()->replaceScene(cocos2d::CCTransitionCrossFade::create(1.2f, scene));
+///////////////////////////////////////////
+
+-(void) addTestButtons{
+
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn1.frame = CGRectMake(10, 300, 60, 40);
+    [btn1 setTitle:@"雷阵雨" forState:UIControlStateNormal];
+    btn1.tag = 1;
+    [btn1 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn1];
+    
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn2.frame = CGRectMake(74, 300, 60, 40);
+    [btn2 setTitle:@"阵雨" forState:UIControlStateNormal];
+    btn2.tag = 2;
+    [btn2 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn2];
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn3.frame = CGRectMake(138, 300, 60, 40);
+    [btn3 setTitle:@"小雨" forState:UIControlStateNormal];
+    btn3.tag = 3;
+    [btn3 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn3];
+    
+    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn4.frame = CGRectMake(198, 300, 60, 40);
+    [btn4 setTitle:@"大雨" forState:UIControlStateNormal];
+    btn4.tag = 4;
+    [btn4 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn4];
     
 }
+
+-(void) btnClick:(UIButton*)btn
+{
+    switch (btn.tag) {
+        case 1://雷阵雨
+            WeatherEffectsUtils::doThunderShower();
+            break;
+        case 2://阵雨
+            WeatherEffectsUtils::doShower();
+            break;
+        default:
+            break;
+    }
+    
+}
+
+
+////////////////////////////////////////////
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

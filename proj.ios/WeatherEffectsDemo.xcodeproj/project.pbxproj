@@ -44,6 +44,10 @@
 		01AEA88418F3F3F900F10C4F /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88218F3F3F900F10C4F /* clouds.png */; };
 		01AEA88718F3F44100F10C4F /* rain.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88518F3F44100F10C4F /* rain.plist */; };
 		01AEA88818F3F44100F10C4F /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88618F3F44100F10C4F /* rain.png */; };
+		01AEA88B18F4487500F10C4F /* light1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88918F4487500F10C4F /* light1a.png */; };
+		01AEA88C18F4487500F10C4F /* light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88A18F4487500F10C4F /* light2.png */; };
+		01AEA88F18F4493000F10C4F /* Shower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA88E18F4493000F10C4F /* Shower.cpp */; };
+		01AEA89218F44B3B00F10C4F /* WeatherEffectsUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
 		15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88D1682F7D5002FB0C5 /* b2CollideCircle.cpp */; };
 		15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88E1682F7D5002FB0C5 /* b2CollideEdge.cpp */; };
@@ -349,6 +353,12 @@
 		01AEA88218F3F3F900F10C4F /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
 		01AEA88518F3F44100F10C4F /* rain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rain.plist; sourceTree = "<group>"; };
 		01AEA88618F3F44100F10C4F /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		01AEA88918F4487500F10C4F /* light1a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light1a.png; sourceTree = "<group>"; };
+		01AEA88A18F4487500F10C4F /* light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light2.png; sourceTree = "<group>"; };
+		01AEA88D18F4491900F10C4F /* Shower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shower.h; path = ../Classes/Shower.h; sourceTree = "<group>"; };
+		01AEA88E18F4493000F10C4F /* Shower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shower.cpp; path = ../Classes/Shower.cpp; sourceTree = "<group>"; };
+		01AEA89018F44B2400F10C4F /* WeatherEffectsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WeatherEffectsUtils.h; path = ../Classes/WeatherEffectsUtils.h; sourceTree = "<group>"; };
+		01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherEffectsUtils.cpp; path = ../Classes/WeatherEffectsUtils.cpp; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		15A3D8891682F7D5002FB0C5 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
@@ -1399,12 +1409,16 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */,
 				01AEA83218F3EE1C00F10C4F /* ThunderShower.h */,
-				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
+				01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */,
+				01AEA88D18F4491900F10C4F /* Shower.h */,
+				01AEA88E18F4493000F10C4F /* Shower.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
+				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
+				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
+				01AEA89018F44B2400F10C4F /* WeatherEffectsUtils.h */,
+				01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2000,11 +2014,13 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01AEA88918F4487500F10C4F /* light1a.png */,
+				01AEA88A18F4487500F10C4F /* light2.png */,
+				01AEA84C18F3F37B00F10C4F /* background */,
 				01AEA88518F3F44100F10C4F /* rain.plist */,
 				01AEA88618F3F44100F10C4F /* rain.png */,
 				01AEA88118F3F3F900F10C4F /* clouds.plist */,
 				01AEA88218F3F3F900F10C4F /* clouds.png */,
-				01AEA84C18F3F37B00F10C4F /* background */,
 				01AEA83C18F3F2B300F10C4F /* fog.plist */,
 				01AEA83D18F3F2B300F10C4F /* fog.png */,
 				01AEA83E18F3F2B300F10C4F /* light1.plist */,
@@ -2119,6 +2135,7 @@
 				01AEA87818F3F37B00F10C4F /* blur_bg1_cloudy_day.jpg in Resources */,
 				01AEA86718F3F37B00F10C4F /* bg0_fine_day.jpg in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				01AEA88B18F4487500F10C4F /* light1a.png in Resources */,
 				01AEA84718F3F2B300F10C4F /* light2.plist in Resources */,
 				01AEA87118F3F37B00F10C4F /* bg_rain_night.jpg in Resources */,
 				01AEA88018F3F37B00F10C4F /* blur_bg_thunder_storm.jpg in Resources */,
@@ -2131,6 +2148,7 @@
 				01AEA84B18F3F2B300F10C4F /* snow.png in Resources */,
 				01AEA87018F3F37B00F10C4F /* bg_rain.jpg in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
+				01AEA88C18F4487500F10C4F /* light2.png in Resources */,
 				01AEA86F18F3F37B00F10C4F /* bg_overcast.jpg in Resources */,
 				01AEA87318F3F37B00F10C4F /* bg_thunder_storm.jpg in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
@@ -2221,6 +2239,7 @@
 				15A3D9A31682F7F9002FB0C5 /* cpArray.c in Sources */,
 				15A3D9A41682F7F9002FB0C5 /* cpBB.c in Sources */,
 				15A3D9A51682F7F9002FB0C5 /* cpBBTree.c in Sources */,
+				01AEA89218F44B3B00F10C4F /* WeatherEffectsUtils.cpp in Sources */,
 				15A3D9A61682F7F9002FB0C5 /* cpBody.c in Sources */,
 				15A3D9A71682F7F9002FB0C5 /* cpCollision.c in Sources */,
 				15A3D9A81682F7F9002FB0C5 /* cpHashSet.c in Sources */,
@@ -2245,6 +2264,7 @@
 				15A3DA381682F826002FB0C5 /* CCControlButtonLoader.cpp in Sources */,
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
+				01AEA88F18F4493000F10C4F /* Shower.cpp in Sources */,
 				298B29BC18D0668400C1920F /* ImageViewReader.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
 				15A3DA3C1682F826002FB0C5 /* CCLabelTTFLoader.cpp in Sources */,

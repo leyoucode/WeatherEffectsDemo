@@ -1,23 +1,23 @@
 //
-//  RainScene.cpp
-//  helloword
+//  Shower.cpp
+//  WeatherEffectsDemo
 //
-//  Created by liu wei on 4/6/14.
-//  Copyright 2014 __MyCompanyName__. All rights reserved.
+//  Created by liu wei on 4/8/14.
+//
 //
 
-#include "ThunderShower.h"
+#include "Shower.h"
 #import "WeatherEffectsUtils.h"
 
 USING_NS_CC;
 
-CCScene* ThunderShower::scene()
+CCScene* Shower::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    ThunderShower *layer = ThunderShower::create();
+    Shower *layer = Shower::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -27,7 +27,7 @@ CCScene* ThunderShower::scene()
 }
 
 // on "init" you need to initialize your instance
-bool ThunderShower::init()
+bool Shower::init()
 {
     // 1. super init first
     if ( !CCLayer::init() )
@@ -66,36 +66,11 @@ bool ThunderShower::init()
     this->addChild(cloudEffect);
     
     
-    CCParticleSystemQuad *light1Effect = CCParticleSystemQuad::create("light1.plist");
-    light1Effect->setPosition(ccp(size.width/2,size.height));
-    light1Effect->setScale(scale);
-    this->addChild(light1Effect);
-    
-    CCParticleSystemQuad *light2Effect = CCParticleSystemQuad::create("light2.plist");
-    light2Effect->setPosition(ccp(size.width/2,size.height));
-    light2Effect->setScale(scale);
-    this->addChild(light2Effect);
-    
-    
-    
-    // Determine speed of the target
-    
-    
-//    // Create the actions
-//    CCFiniteTimeAction* actionMove =
-//    CCMoveTo::create( (float)size.width/35,
-//                     ccp(size.width, size.height/2) );
-//    CCFiniteTimeAction* actionMoveDone =
-//    CCCallFuncN::create( this,
-//                        callfuncN_selector(RainScene::bgSpriteMoveFinished));
-//    bgSprite->runAction( CCSequence::create(actionMove,
-//                                          actionMoveDone, NULL) );
-    
     return true;
 }
 
-void ThunderShower::bgSpriteMoveFinished()
+void Shower::bgSpriteMoveFinished()
 {
     CCLOG("background image move finished");
-    WeatherEffectsUtils::doThunderShower();
+    WeatherEffectsUtils::doShower();
 }

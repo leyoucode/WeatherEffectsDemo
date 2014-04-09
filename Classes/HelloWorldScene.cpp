@@ -65,7 +65,7 @@ bool HelloWorld::init()
     this->addChild(pLabel, 1);
 
     // add "HelloWorld" splash screen"
-    CCSprite* pSprite = CCSprite::create("HelloWorld.png");
+    CCSprite* pSprite = CCSprite::create("bg18_fog_night.jpg");
 
     // position the sprite on the center of the screen
     pSprite->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
