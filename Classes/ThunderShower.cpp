@@ -97,5 +97,6 @@ bool ThunderShower::init()
 void ThunderShower::bgSpriteMoveFinished()
 {
     CCLOG("background image move finished");
+    
     WeatherEffectsUtils::doThunderShower();
 }

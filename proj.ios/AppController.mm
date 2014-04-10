@@ -91,6 +91,20 @@ static AppDelegate s_sharedApplication;
     [btn4 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [viewController.view addSubview:btn4];
     
+    UIButton *btn5 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn5.frame = CGRectMake(10, 360, 60, 40);
+    [btn5 setTitle:@"晴天白天" forState:UIControlStateNormal];
+    btn5.tag = 5;
+    [btn5 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn5];
+    
+    UIButton *btn6 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn6.frame = CGRectMake(100, 360, 60, 40);
+    [btn6 setTitle:@"晴天晚上" forState:UIControlStateNormal];
+    btn6.tag = 6;
+    [btn6 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [viewController.view addSubview:btn6];
+    
 }
 
 -(void) btnClick:(UIButton*)btn
@@ -101,6 +115,18 @@ static AppDelegate s_sharedApplication;
             break;
         case 2://阵雨
             WeatherEffectsUtils::doShower();
+            break;
+        case 3://阵雨
+            WeatherEffectsUtils::doShower();
+            break;
+        case 4://阵雨
+            WeatherEffectsUtils::doShower();
+            break;
+        case 5://晴天白天
+            WeatherEffectsUtils::doSunnyDayTime();
+            break;
+        case 6://晴天晚上
+            WeatherEffectsUtils::doSunnyNight();
             break;
         default:
             break;

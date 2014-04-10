@@ -11,9 +11,19 @@
 
 #define TRANSACTION_DURATION 0.8f
 
+//daytime night
+
+typedef enum DayTimeOrNight {
+    DAYTIME,
+    NIGHT
+} DayTimeOrNight;
+
+
 class WeatherEffectsUtils
 {
 public:
+    
+    //============雨天=================
     // 雷阵雨
     static void doThunderShower();
     // 阵雨
@@ -22,6 +32,14 @@ public:
     static void doLightRain();
     //大雨
     static void doHeavyRain();
+    
+    //============晴天=================
+    //晴天晚上
+    static void doSunnyNight();
+    //晴天白天
+    static void doSunnyDayTime();
+    
+    
     
 };
 
