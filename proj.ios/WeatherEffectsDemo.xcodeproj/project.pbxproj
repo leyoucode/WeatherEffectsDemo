@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01AEA83318F3EE1C00F10C4F /* ThunderShower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */; };
+		01AEA83318F3EE1C00F10C4F /* ThunderShowerDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA83118F3EE1C00F10C4F /* ThunderShowerDayTime.cpp */; };
 		01AEA84418F3F2B300F10C4F /* fog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83C18F3F2B300F10C4F /* fog.plist */; };
 		01AEA84518F3F2B300F10C4F /* fog.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83D18F3F2B300F10C4F /* fog.png */; };
 		01AEA84618F3F2B300F10C4F /* light1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83E18F3F2B300F10C4F /* light1.plist */; };
 		01AEA84718F3F2B300F10C4F /* light2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA83F18F3F2B300F10C4F /* light2.plist */; };
-		01AEA84A18F3F2B300F10C4F /* snow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84218F3F2B300F10C4F /* snow.plist */; };
-		01AEA84B18F3F2B300F10C4F /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84318F3F2B300F10C4F /* snow.png */; };
+		01AEA84A18F3F2B300F10C4F /* heavy_snow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84218F3F2B300F10C4F /* heavy_snow.plist */; };
 		01AEA86718F3F37B00F10C4F /* bg0_fine_day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84D18F3F37B00F10C4F /* bg0_fine_day.jpg */; };
 		01AEA86818F3F37B00F10C4F /* bg0_fine_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84E18F3F37B00F10C4F /* bg0_fine_night.jpg */; };
 		01AEA86918F3F37B00F10C4F /* bg14_day_snow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA84F18F3F37B00F10C4F /* bg14_day_snow.jpg */; };
@@ -42,11 +41,9 @@
 		01AEA88018F3F37B00F10C4F /* blur_bg_thunder_storm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA86618F3F37B00F10C4F /* blur_bg_thunder_storm.jpg */; };
 		01AEA88318F3F3F900F10C4F /* clouds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88118F3F3F900F10C4F /* clouds.plist */; };
 		01AEA88418F3F3F900F10C4F /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88218F3F3F900F10C4F /* clouds.png */; };
-		01AEA88718F3F44100F10C4F /* rain.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88518F3F44100F10C4F /* rain.plist */; };
-		01AEA88818F3F44100F10C4F /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88618F3F44100F10C4F /* rain.png */; };
 		01AEA88B18F4487500F10C4F /* light1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88918F4487500F10C4F /* light1a.png */; };
 		01AEA88C18F4487500F10C4F /* light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA88A18F4487500F10C4F /* light2.png */; };
-		01AEA88F18F4493000F10C4F /* Shower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA88E18F4493000F10C4F /* Shower.cpp */; };
+		01AEA88F18F4493000F10C4F /* HeavyRainDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA88E18F4493000F10C4F /* HeavyRainDayTime.cpp */; };
 		01AEA89218F44B3B00F10C4F /* WeatherEffectsUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */; };
 		01AEA89518F4F7F500F10C4F /* SunnyNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA89418F4F7F500F10C4F /* SunnyNight.cpp */; };
 		01AEA89718F528E700F10C4F /* ld_bg_fine_day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA89618F528E700F10C4F /* ld_bg_fine_day.jpg */; };
@@ -59,6 +56,30 @@
 		01AEA8A618F54D3700F10C4F /* sun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8A518F54D3700F10C4F /* sun.plist */; };
 		01AEA8A818F550CE00F10C4F /* sun_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8A718F550CE00F10C4F /* sun_small.png */; };
 		01AEA8AA18F5516700F10C4F /* sun_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8A918F5516700F10C4F /* sun_large.png */; };
+		01AEA8AD18F6605F00F10C4F /* CloudyDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8AC18F6605F00F10C4F /* CloudyDayTime.cpp */; };
+		01AEA8B018F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8AE18F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg */; };
+		01AEA8B118F6621A00F10C4F /* ld_bg_cloudy_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8AF18F6621A00F10C4F /* ld_bg_cloudy_night.jpg */; };
+		01AEA8B418F6640000F10C4F /* overcast_cloud1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8B218F6640000F10C4F /* overcast_cloud1.png */; };
+		01AEA8B518F6640000F10C4F /* overcast_cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8B318F6640000F10C4F /* overcast_cloud2.png */; };
+		01AEA8B818F6793600F10C4F /* CloudyNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8B718F6793600F10C4F /* CloudyNight.cpp */; };
+		01AEA8BB18F67B5F00F10C4F /* ld_bg_rain_day_time.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8B918F67B5F00F10C4F /* ld_bg_rain_day_time.jpg */; };
+		01AEA8BC18F67B5F00F10C4F /* ld_bg_rain_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8BA18F67B5F00F10C4F /* ld_bg_rain_night.jpg */; };
+		01AEA8BF18F67CA100F10C4F /* ThunderShowerNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8BE18F67CA100F10C4F /* ThunderShowerNight.cpp */; };
+		01AEA8C218F6869D00F10C4F /* HeavyRainNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8C018F6869D00F10C4F /* HeavyRainNight.cpp */; };
+		01AEA8C518F68A4700F10C4F /* HeavySnowDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8C418F68A4700F10C4F /* HeavySnowDayTime.cpp */; };
+		01AEA8C818F68A5D00F10C4F /* LightSnowDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8C718F68A5D00F10C4F /* LightSnowDayTime.cpp */; };
+		01AEA8CB18F68A8600F10C4F /* HeavySnowNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8CA18F68A8600F10C4F /* HeavySnowNight.cpp */; };
+		01AEA8CE18F68AA500F10C4F /* LightSnowNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8CD18F68AA500F10C4F /* LightSnowNight.cpp */; };
+		01AEA8D018F68D1B00F10C4F /* stars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8CF18F68D1B00F10C4F /* stars.plist */; };
+		01AEA8D318F6918E00F10C4F /* ld_bg_snow_day_time.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8D118F6918E00F10C4F /* ld_bg_snow_day_time.jpg */; };
+		01AEA8D418F6918E00F10C4F /* ld_bg_snow_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8D218F6918E00F10C4F /* ld_bg_snow_night.jpg */; };
+		01AEA8D618F6989100F10C4F /* light_snow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8D518F6989100F10C4F /* light_snow.plist */; };
+		01AEA8D918F69E8300F10C4F /* LightRainDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8D818F69E8300F10C4F /* LightRainDayTime.cpp */; };
+		01AEA8DB18F69F9100F10C4F /* heavy_rain.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8DA18F69F9100F10C4F /* heavy_rain.plist */; };
+		01AEA8DD18F69FC000F10C4F /* light_rain.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8DC18F69FC000F10C4F /* light_rain.plist */; };
+		01AEA8E018F6A08F00F10C4F /* LightRainNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8DF18F6A08F00F10C4F /* LightRainNight.cpp */; };
+		01AEA8E418F6A30400F10C4F /* WindyNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8E218F6A30400F10C4F /* WindyNight.cpp */; };
+		01AEA8E618F6A32E00F10C4F /* WindyDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8E518F6A32E00F10C4F /* WindyDayTime.cpp */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
 		15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88D1682F7D5002FB0C5 /* b2CollideCircle.cpp */; };
 		15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88E1682F7D5002FB0C5 /* b2CollideEdge.cpp */; };
@@ -326,14 +347,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThunderShower.cpp; path = ../Classes/ThunderShower.cpp; sourceTree = "<group>"; };
-		01AEA83218F3EE1C00F10C4F /* ThunderShower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThunderShower.h; path = ../Classes/ThunderShower.h; sourceTree = "<group>"; };
+		01AEA83118F3EE1C00F10C4F /* ThunderShowerDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThunderShowerDayTime.cpp; path = ../Classes/ThunderShowerDayTime.cpp; sourceTree = "<group>"; };
+		01AEA83218F3EE1C00F10C4F /* ThunderShowerDayTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThunderShowerDayTime.h; path = ../Classes/ThunderShowerDayTime.h; sourceTree = "<group>"; };
 		01AEA83C18F3F2B300F10C4F /* fog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fog.plist; sourceTree = "<group>"; };
 		01AEA83D18F3F2B300F10C4F /* fog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fog.png; sourceTree = "<group>"; };
 		01AEA83E18F3F2B300F10C4F /* light1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = light1.plist; sourceTree = "<group>"; };
 		01AEA83F18F3F2B300F10C4F /* light2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = light2.plist; sourceTree = "<group>"; };
-		01AEA84218F3F2B300F10C4F /* snow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = snow.plist; sourceTree = "<group>"; };
-		01AEA84318F3F2B300F10C4F /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		01AEA84218F3F2B300F10C4F /* heavy_snow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heavy_snow.plist; sourceTree = "<group>"; };
 		01AEA84D18F3F37B00F10C4F /* bg0_fine_day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg0_fine_day.jpg; sourceTree = "<group>"; };
 		01AEA84E18F3F37B00F10C4F /* bg0_fine_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg0_fine_night.jpg; sourceTree = "<group>"; };
 		01AEA84F18F3F37B00F10C4F /* bg14_day_snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg14_day_snow.jpg; sourceTree = "<group>"; };
@@ -362,12 +382,10 @@
 		01AEA86618F3F37B00F10C4F /* blur_bg_thunder_storm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur_bg_thunder_storm.jpg; sourceTree = "<group>"; };
 		01AEA88118F3F3F900F10C4F /* clouds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = clouds.plist; sourceTree = "<group>"; };
 		01AEA88218F3F3F900F10C4F /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
-		01AEA88518F3F44100F10C4F /* rain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rain.plist; sourceTree = "<group>"; };
-		01AEA88618F3F44100F10C4F /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
 		01AEA88918F4487500F10C4F /* light1a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light1a.png; sourceTree = "<group>"; };
 		01AEA88A18F4487500F10C4F /* light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light2.png; sourceTree = "<group>"; };
-		01AEA88D18F4491900F10C4F /* Shower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shower.h; path = ../Classes/Shower.h; sourceTree = "<group>"; };
-		01AEA88E18F4493000F10C4F /* Shower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shower.cpp; path = ../Classes/Shower.cpp; sourceTree = "<group>"; };
+		01AEA88D18F4491900F10C4F /* HeavyRainDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HeavyRainDayTime.h; path = ../Classes/HeavyRainDayTime.h; sourceTree = "<group>"; };
+		01AEA88E18F4493000F10C4F /* HeavyRainDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavyRainDayTime.cpp; path = ../Classes/HeavyRainDayTime.cpp; sourceTree = "<group>"; };
 		01AEA89018F44B2400F10C4F /* WeatherEffectsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WeatherEffectsUtils.h; path = ../Classes/WeatherEffectsUtils.h; sourceTree = "<group>"; };
 		01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherEffectsUtils.cpp; path = ../Classes/WeatherEffectsUtils.cpp; sourceTree = "<group>"; };
 		01AEA89318F4F7EC00F10C4F /* SunnyNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SunnyNight.h; path = ../Classes/SunnyNight.h; sourceTree = "<group>"; };
@@ -383,6 +401,42 @@
 		01AEA8A518F54D3700F10C4F /* sun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sun.plist; sourceTree = "<group>"; };
 		01AEA8A718F550CE00F10C4F /* sun_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun_small.png; sourceTree = "<group>"; };
 		01AEA8A918F5516700F10C4F /* sun_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun_large.png; sourceTree = "<group>"; };
+		01AEA8AB18F6605400F10C4F /* CloudyDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CloudyDayTime.h; path = ../Classes/CloudyDayTime.h; sourceTree = "<group>"; };
+		01AEA8AC18F6605F00F10C4F /* CloudyDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CloudyDayTime.cpp; path = ../Classes/CloudyDayTime.cpp; sourceTree = "<group>"; };
+		01AEA8AE18F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_cloudy_day_time.jpg; sourceTree = "<group>"; };
+		01AEA8AF18F6621A00F10C4F /* ld_bg_cloudy_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_cloudy_night.jpg; sourceTree = "<group>"; };
+		01AEA8B218F6640000F10C4F /* overcast_cloud1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overcast_cloud1.png; sourceTree = "<group>"; };
+		01AEA8B318F6640000F10C4F /* overcast_cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overcast_cloud2.png; sourceTree = "<group>"; };
+		01AEA8B618F6792F00F10C4F /* CloudyNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CloudyNight.h; path = ../Classes/CloudyNight.h; sourceTree = "<group>"; };
+		01AEA8B718F6793600F10C4F /* CloudyNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CloudyNight.cpp; path = ../Classes/CloudyNight.cpp; sourceTree = "<group>"; };
+		01AEA8B918F67B5F00F10C4F /* ld_bg_rain_day_time.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_rain_day_time.jpg; sourceTree = "<group>"; };
+		01AEA8BA18F67B5F00F10C4F /* ld_bg_rain_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_rain_night.jpg; sourceTree = "<group>"; };
+		01AEA8BD18F67C8D00F10C4F /* ThunderShowerNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThunderShowerNight.h; path = ../Classes/ThunderShowerNight.h; sourceTree = "<group>"; };
+		01AEA8BE18F67CA100F10C4F /* ThunderShowerNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThunderShowerNight.cpp; path = ../Classes/ThunderShowerNight.cpp; sourceTree = "<group>"; };
+		01AEA8C018F6869D00F10C4F /* HeavyRainNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavyRainNight.cpp; path = ../Classes/HeavyRainNight.cpp; sourceTree = "<group>"; };
+		01AEA8C118F6869D00F10C4F /* HeavyRainNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeavyRainNight.h; path = ../Classes/HeavyRainNight.h; sourceTree = "<group>"; };
+		01AEA8C318F68A3800F10C4F /* HeavySnowDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HeavySnowDayTime.h; path = ../Classes/HeavySnowDayTime.h; sourceTree = "<group>"; };
+		01AEA8C418F68A4700F10C4F /* HeavySnowDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavySnowDayTime.cpp; path = ../Classes/HeavySnowDayTime.cpp; sourceTree = "<group>"; };
+		01AEA8C618F68A5500F10C4F /* LightSnowDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LightSnowDayTime.h; path = ../Classes/LightSnowDayTime.h; sourceTree = "<group>"; };
+		01AEA8C718F68A5D00F10C4F /* LightSnowDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LightSnowDayTime.cpp; path = ../Classes/LightSnowDayTime.cpp; sourceTree = "<group>"; };
+		01AEA8C918F68A7B00F10C4F /* HeavySnowNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HeavySnowNight.h; path = ../Classes/HeavySnowNight.h; sourceTree = "<group>"; };
+		01AEA8CA18F68A8600F10C4F /* HeavySnowNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavySnowNight.cpp; path = ../Classes/HeavySnowNight.cpp; sourceTree = "<group>"; };
+		01AEA8CC18F68A9600F10C4F /* LightSnowNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LightSnowNight.h; path = ../Classes/LightSnowNight.h; sourceTree = "<group>"; };
+		01AEA8CD18F68AA500F10C4F /* LightSnowNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LightSnowNight.cpp; path = ../Classes/LightSnowNight.cpp; sourceTree = "<group>"; };
+		01AEA8CF18F68D1B00F10C4F /* stars.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stars.plist; sourceTree = "<group>"; };
+		01AEA8D118F6918E00F10C4F /* ld_bg_snow_day_time.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_snow_day_time.jpg; sourceTree = "<group>"; };
+		01AEA8D218F6918E00F10C4F /* ld_bg_snow_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ld_bg_snow_night.jpg; sourceTree = "<group>"; };
+		01AEA8D518F6989100F10C4F /* light_snow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = light_snow.plist; sourceTree = "<group>"; };
+		01AEA8D718F69E7600F10C4F /* LightRainDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LightRainDayTime.h; path = ../Classes/LightRainDayTime.h; sourceTree = "<group>"; };
+		01AEA8D818F69E8300F10C4F /* LightRainDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LightRainDayTime.cpp; path = ../Classes/LightRainDayTime.cpp; sourceTree = "<group>"; };
+		01AEA8DA18F69F9100F10C4F /* heavy_rain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heavy_rain.plist; sourceTree = "<group>"; };
+		01AEA8DC18F69FC000F10C4F /* light_rain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = light_rain.plist; sourceTree = "<group>"; };
+		01AEA8DE18F6A08100F10C4F /* LightRainNight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LightRainNight.h; path = ../Classes/LightRainNight.h; sourceTree = "<group>"; };
+		01AEA8DF18F6A08F00F10C4F /* LightRainNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LightRainNight.cpp; path = ../Classes/LightRainNight.cpp; sourceTree = "<group>"; };
+		01AEA8E118F6A2F500F10C4F /* WindyDayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WindyDayTime.h; path = ../Classes/WindyDayTime.h; sourceTree = "<group>"; };
+		01AEA8E218F6A30400F10C4F /* WindyNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindyNight.cpp; path = ../Classes/WindyNight.cpp; sourceTree = "<group>"; };
+		01AEA8E318F6A30400F10C4F /* WindyNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindyNight.h; path = ../Classes/WindyNight.h; sourceTree = "<group>"; };
+		01AEA8E518F6A32E00F10C4F /* WindyDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindyDayTime.cpp; path = ../Classes/WindyDayTime.cpp; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		15A3D8891682F7D5002FB0C5 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
@@ -911,6 +965,12 @@
 		01AEA84C18F3F37B00F10C4F /* background */ = {
 			isa = PBXGroup;
 			children = (
+				01AEA8D118F6918E00F10C4F /* ld_bg_snow_day_time.jpg */,
+				01AEA8D218F6918E00F10C4F /* ld_bg_snow_night.jpg */,
+				01AEA8B918F67B5F00F10C4F /* ld_bg_rain_day_time.jpg */,
+				01AEA8BA18F67B5F00F10C4F /* ld_bg_rain_night.jpg */,
+				01AEA8AE18F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg */,
+				01AEA8AF18F6621A00F10C4F /* ld_bg_cloudy_night.jpg */,
 				01AEA89818F528FD00F10C4F /* ld_bg_fine_day_night.jpg */,
 				01AEA89618F528E700F10C4F /* ld_bg_fine_day.jpg */,
 				01AEA84D18F3F37B00F10C4F /* bg0_fine_day.jpg */,
@@ -1439,16 +1499,40 @@
 				01AEA8A118F543B400F10C4F /* SunnyDayTime.cpp */,
 				01AEA89318F4F7EC00F10C4F /* SunnyNight.h */,
 				01AEA89418F4F7F500F10C4F /* SunnyNight.cpp */,
-				01AEA83218F3EE1C00F10C4F /* ThunderShower.h */,
-				01AEA83118F3EE1C00F10C4F /* ThunderShower.cpp */,
-				01AEA88D18F4491900F10C4F /* Shower.h */,
-				01AEA88E18F4493000F10C4F /* Shower.cpp */,
+				01AEA8E118F6A2F500F10C4F /* WindyDayTime.h */,
+				01AEA8E518F6A32E00F10C4F /* WindyDayTime.cpp */,
+				01AEA8E318F6A30400F10C4F /* WindyNight.h */,
+				01AEA8E218F6A30400F10C4F /* WindyNight.cpp */,
+				01AEA83218F3EE1C00F10C4F /* ThunderShowerDayTime.h */,
+				01AEA83118F3EE1C00F10C4F /* ThunderShowerDayTime.cpp */,
+				01AEA8BD18F67C8D00F10C4F /* ThunderShowerNight.h */,
+				01AEA8BE18F67CA100F10C4F /* ThunderShowerNight.cpp */,
+				01AEA88D18F4491900F10C4F /* HeavyRainDayTime.h */,
+				01AEA88E18F4493000F10C4F /* HeavyRainDayTime.cpp */,
+				01AEA8C118F6869D00F10C4F /* HeavyRainNight.h */,
+				01AEA8C018F6869D00F10C4F /* HeavyRainNight.cpp */,
+				01AEA8D718F69E7600F10C4F /* LightRainDayTime.h */,
+				01AEA8D818F69E8300F10C4F /* LightRainDayTime.cpp */,
+				01AEA8DE18F6A08100F10C4F /* LightRainNight.h */,
+				01AEA8DF18F6A08F00F10C4F /* LightRainNight.cpp */,
+				01AEA8AB18F6605400F10C4F /* CloudyDayTime.h */,
+				01AEA8AC18F6605F00F10C4F /* CloudyDayTime.cpp */,
+				01AEA8B618F6792F00F10C4F /* CloudyNight.h */,
+				01AEA8B718F6793600F10C4F /* CloudyNight.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
 				01AEA89018F44B2400F10C4F /* WeatherEffectsUtils.h */,
 				01AEA89118F44B3B00F10C4F /* WeatherEffectsUtils.cpp */,
+				01AEA8C318F68A3800F10C4F /* HeavySnowDayTime.h */,
+				01AEA8C418F68A4700F10C4F /* HeavySnowDayTime.cpp */,
+				01AEA8C918F68A7B00F10C4F /* HeavySnowNight.h */,
+				01AEA8CA18F68A8600F10C4F /* HeavySnowNight.cpp */,
+				01AEA8C618F68A5500F10C4F /* LightSnowDayTime.h */,
+				01AEA8C718F68A5D00F10C4F /* LightSnowDayTime.cpp */,
+				01AEA8CC18F68A9600F10C4F /* LightSnowNight.h */,
+				01AEA8CD18F68AA500F10C4F /* LightSnowNight.cpp */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2044,6 +2128,13 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01AEA8DC18F69FC000F10C4F /* light_rain.plist */,
+				01AEA8DA18F69F9100F10C4F /* heavy_rain.plist */,
+				01AEA8D518F6989100F10C4F /* light_snow.plist */,
+				01AEA84218F3F2B300F10C4F /* heavy_snow.plist */,
+				01AEA8CF18F68D1B00F10C4F /* stars.plist */,
+				01AEA8B218F6640000F10C4F /* overcast_cloud1.png */,
+				01AEA8B318F6640000F10C4F /* overcast_cloud2.png */,
 				01AEA8A918F5516700F10C4F /* sun_large.png */,
 				01AEA8A718F550CE00F10C4F /* sun_small.png */,
 				01AEA8A518F54D3700F10C4F /* sun.plist */,
@@ -2054,16 +2145,12 @@
 				01AEA88918F4487500F10C4F /* light1a.png */,
 				01AEA88A18F4487500F10C4F /* light2.png */,
 				01AEA84C18F3F37B00F10C4F /* background */,
-				01AEA88518F3F44100F10C4F /* rain.plist */,
-				01AEA88618F3F44100F10C4F /* rain.png */,
 				01AEA88118F3F3F900F10C4F /* clouds.plist */,
 				01AEA88218F3F3F900F10C4F /* clouds.png */,
 				01AEA83C18F3F2B300F10C4F /* fog.plist */,
 				01AEA83D18F3F2B300F10C4F /* fog.png */,
 				01AEA83E18F3F2B300F10C4F /* light1.plist */,
 				01AEA83F18F3F2B300F10C4F /* light2.plist */,
-				01AEA84218F3F2B300F10C4F /* snow.plist */,
-				01AEA84318F3F2B300F10C4F /* snow.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -2158,15 +2245,16 @@
 				01AEA87218F3F37B00F10C4F /* bg_sand_storm.jpg in Resources */,
 				01AEA87F18F3F37B00F10C4F /* blur_bg_sand_storm.jpg in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
+				01AEA8D418F6918E00F10C4F /* ld_bg_snow_night.jpg in Resources */,
 				01AEA8A418F5448000F10C4F /* sunshine.png in Resources */,
-				01AEA84A18F3F2B300F10C4F /* snow.plist in Resources */,
+				01AEA84A18F3F2B300F10C4F /* heavy_snow.plist in Resources */,
 				01AEA84618F3F2B300F10C4F /* light1.plist in Resources */,
 				01AEA86918F3F37B00F10C4F /* bg14_day_snow.jpg in Resources */,
+				01AEA8DD18F69FC000F10C4F /* light_rain.plist in Resources */,
 				01AEA87E18F3F37B00F10C4F /* blur_bg_rain_night.jpg in Resources */,
 				01AEA8A818F550CE00F10C4F /* sun_small.png in Resources */,
 				01AEA87518F3F37B00F10C4F /* blur_bg0_fine_night.jpg in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
-				01AEA88818F3F44100F10C4F /* rain.png in Resources */,
 				01AEA86E18F3F37B00F10C4F /* bg_na.jpg in Resources */,
 				01AEA84518F3F2B300F10C4F /* fog.png in Resources */,
 				01AEA87C18F3F37B00F10C4F /* blur_bg_overcast.jpg in Resources */,
@@ -2174,22 +2262,27 @@
 				01AEA87818F3F37B00F10C4F /* blur_bg1_cloudy_day.jpg in Resources */,
 				01AEA86718F3F37B00F10C4F /* bg0_fine_day.jpg in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				01AEA8D018F68D1B00F10C4F /* stars.plist in Resources */,
 				01AEA88B18F4487500F10C4F /* light1a.png in Resources */,
 				01AEA84718F3F2B300F10C4F /* light2.plist in Resources */,
+				01AEA8D618F6989100F10C4F /* light_snow.plist in Resources */,
 				01AEA87118F3F37B00F10C4F /* bg_rain_night.jpg in Resources */,
 				01AEA88018F3F37B00F10C4F /* blur_bg_thunder_storm.jpg in Resources */,
 				01AEA89D18F5336200F10C4F /* moon_3_4.png in Resources */,
+				01AEA8B018F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg in Resources */,
 				01AEA89918F528FD00F10C4F /* ld_bg_fine_day_night.jpg in Resources */,
+				01AEA8B118F6621A00F10C4F /* ld_bg_cloudy_night.jpg in Resources */,
 				01AEA86D18F3F37B00F10C4F /* bg_fog_day.jpg in Resources */,
 				01AEA86A18F3F37B00F10C4F /* bg18_fog_night.jpg in Resources */,
-				01AEA88718F3F44100F10C4F /* rain.plist in Resources */,
 				01AEA89718F528E700F10C4F /* ld_bg_fine_day.jpg in Resources */,
 				01AEA86B18F3F37B00F10C4F /* bg1_cloudy_day.jpg in Resources */,
+				01AEA8BB18F67B5F00F10C4F /* ld_bg_rain_day_time.jpg in Resources */,
 				01AEA86818F3F37B00F10C4F /* bg0_fine_night.jpg in Resources */,
 				01AEA87D18F3F37B00F10C4F /* blur_bg_rain.jpg in Resources */,
-				01AEA84B18F3F2B300F10C4F /* snow.png in Resources */,
+				01AEA8B418F6640000F10C4F /* overcast_cloud1.png in Resources */,
 				01AEA87018F3F37B00F10C4F /* bg_rain.jpg in Resources */,
 				01AEA89F18F5375500F10C4F /* star_flicker8.png in Resources */,
+				01AEA8B518F6640000F10C4F /* overcast_cloud2.png in Resources */,
 				01AEA8AA18F5516700F10C4F /* sun_large.png in Resources */,
 				01AEA8A618F54D3700F10C4F /* sun.plist in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
@@ -2203,9 +2296,12 @@
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				01AEA86C18F3F37B00F10C4F /* bg1_cloudy_night.jpg in Resources */,
 				01AEA89B18F5332500F10C4F /* star_flicker16.png in Resources */,
+				01AEA8DB18F69F9100F10C4F /* heavy_rain.plist in Resources */,
 				01AEA87418F3F37B00F10C4F /* blur_bg0_fine_day.jpg in Resources */,
+				01AEA8BC18F67B5F00F10C4F /* ld_bg_rain_night.jpg in Resources */,
 				01AEA87918F3F37B00F10C4F /* blur_bg1_cloudy_night.jpg in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				01AEA8D318F6918E00F10C4F /* ld_bg_snow_day_time.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2271,7 +2367,7 @@
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
-				01AEA83318F3EE1C00F10C4F /* ThunderShower.cpp in Sources */,
+				01AEA83318F3EE1C00F10C4F /* ThunderShowerDayTime.cpp in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,
 				15A3D99A1682F7F9002FB0C5 /* cpGearJoint.c in Sources */,
@@ -2288,6 +2384,7 @@
 				15A3D9A51682F7F9002FB0C5 /* cpBBTree.c in Sources */,
 				01AEA89218F44B3B00F10C4F /* WeatherEffectsUtils.cpp in Sources */,
 				15A3D9A61682F7F9002FB0C5 /* cpBody.c in Sources */,
+				01AEA8CE18F68AA500F10C4F /* LightSnowNight.cpp in Sources */,
 				15A3D9A71682F7F9002FB0C5 /* cpCollision.c in Sources */,
 				15A3D9A81682F7F9002FB0C5 /* cpHashSet.c in Sources */,
 				15A3D9A91682F7F9002FB0C5 /* cpPolyShape.c in Sources */,
@@ -2298,9 +2395,11 @@
 				15A3D9AE1682F7F9002FB0C5 /* cpSpaceQuery.c in Sources */,
 				15A3D9AF1682F7F9002FB0C5 /* cpSpaceStep.c in Sources */,
 				15A3D9B01682F7F9002FB0C5 /* cpSpatialIndex.c in Sources */,
+				01AEA8E018F6A08F00F10C4F /* LightRainNight.cpp in Sources */,
 				15A3D9B11682F7F9002FB0C5 /* cpSweep1D.c in Sources */,
 				15A3D9B21682F7F9002FB0C5 /* cpVect.c in Sources */,
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
+				01AEA8C518F68A4700F10C4F /* HeavySnowDayTime.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
@@ -2311,11 +2410,12 @@
 				15A3DA381682F826002FB0C5 /* CCControlButtonLoader.cpp in Sources */,
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
-				01AEA88F18F4493000F10C4F /* Shower.cpp in Sources */,
+				01AEA88F18F4493000F10C4F /* HeavyRainDayTime.cpp in Sources */,
 				298B29BC18D0668400C1920F /* ImageViewReader.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
 				15A3DA3C1682F826002FB0C5 /* CCLabelTTFLoader.cpp in Sources */,
 				15A3DA3D1682F826002FB0C5 /* CCLayerColorLoader.cpp in Sources */,
+				01AEA8B818F6793600F10C4F /* CloudyNight.cpp in Sources */,
 				15A3DA3E1682F826002FB0C5 /* CCLayerGradientLoader.cpp in Sources */,
 				15A3DA3F1682F826002FB0C5 /* CCLayerLoader.cpp in Sources */,
 				15A3DA401682F826002FB0C5 /* CCMenuItemImageLoader.cpp in Sources */,
@@ -2324,6 +2424,7 @@
 				15A3DA411682F826002FB0C5 /* CCMenuItemLoader.cpp in Sources */,
 				15A3DA421682F826002FB0C5 /* CCNode+CCBRelativePositioning.cpp in Sources */,
 				15A3DA431682F826002FB0C5 /* CCNodeLoader.cpp in Sources */,
+				01AEA8D918F69E8300F10C4F /* LightRainDayTime.cpp in Sources */,
 				15A3DA441682F826002FB0C5 /* CCNodeLoaderLibrary.cpp in Sources */,
 				298B29C118D0668400C1920F /* ListViewReader.cpp in Sources */,
 				15A3DA451682F826002FB0C5 /* CCParticleSystemQuadLoader.cpp in Sources */,
@@ -2354,10 +2455,12 @@
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
+				01AEA8AD18F6605F00F10C4F /* CloudyDayTime.cpp in Sources */,
 				15A3DA5E1682F826002FB0C5 /* CCPhysicsDebugNode.cpp in Sources */,
 				375BD5131868454E0024609E /* CCActionObject.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				01AEA8C818F68A5D00F10C4F /* LightSnowDayTime.cpp in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
@@ -2381,6 +2484,7 @@
 				1A8F3B77175E05DA00049216 /* CCSkeleton.cpp in Sources */,
 				1A8F3B78175E05DA00049216 /* CCSkeletonAnimation.cpp in Sources */,
 				375BD5121868454E0024609E /* CCActionNode.cpp in Sources */,
+				01AEA8E418F6A30400F10C4F /* WindyNight.cpp in Sources */,
 				1A8F3B79175E05DA00049216 /* extension.cpp in Sources */,
 				1A8F3B7A175E05DA00049216 /* Json.cpp in Sources */,
 				1A8F3B7B175E05DA00049216 /* RegionAttachment.cpp in Sources */,
@@ -2393,6 +2497,8 @@
 				1A8F3B81175E05DA00049216 /* SlotData.cpp in Sources */,
 				1A8F3B82175E05DA00049216 /* spine-cocos2dx.cpp in Sources */,
 				298B29C418D0668400C1920F /* ScrollViewReader.cpp in Sources */,
+				01AEA8E618F6A32E00F10C4F /* WindyDayTime.cpp in Sources */,
+				01AEA8BF18F67CA100F10C4F /* ThunderShowerNight.cpp in Sources */,
 				1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */,
 				375BD4C51868411B0024609E /* TriggerMng.cpp in Sources */,
 				1A9CE8781765A12C000E3062 /* AssetsManager.cpp in Sources */,
@@ -2419,6 +2525,7 @@
 				379BB9AC17F03F3700829B88 /* CCUtilMath.cpp in Sources */,
 				379BB9AD17F03F3700829B88 /* CCComAttribute.cpp in Sources */,
 				379BB9AE17F03F3700829B88 /* CCComAudio.cpp in Sources */,
+				01AEA8CB18F68A8600F10C4F /* HeavySnowNight.cpp in Sources */,
 				379BB9AF17F03F3700829B88 /* CCComController.cpp in Sources */,
 				379BB9B017F03F3700829B88 /* CCComRender.cpp in Sources */,
 				379BB9B117F03F3700829B88 /* CCInputDelegate.cpp in Sources */,
@@ -2441,6 +2548,7 @@
 				379BB9C617F03F3700829B88 /* UILoadingBar.cpp in Sources */,
 				379BB9C717F03F3700829B88 /* UISlider.cpp in Sources */,
 				379BB9C917F03F3700829B88 /* UITextField.cpp in Sources */,
+				01AEA8C218F6869D00F10C4F /* HeavyRainNight.cpp in Sources */,
 				379BB9CB17F03F3700829B88 /* DictionaryHelper.cpp in Sources */,
 				379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */,
 				379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */,

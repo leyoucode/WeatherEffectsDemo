@@ -24,22 +24,47 @@ class WeatherEffectsUtils
 public:
     
     //============雨天=================
-    // 雷阵雨
-    static void doThunderShower();
-    // 阵雨
-    static void doShower();
-    //小，中雨
-    static void doLightRain();
-    //大雨
-    static void doHeavyRain();
+    // 雷阵雨白天
+    static void doThunderShowerDayTime();
+    // 雷阵雨晚上
+    static void doThunderShowerNight();
+    // 大雨白天
+    static void doHeavyRainDayTime();
+    // 大雨晚上
+    static void doHeavyRainNight();
+    // 小雨白天
+    static void doLightRainDayTime();
+    // 小雨晚上
+    static void doLightRainNight();
+    
+    //============雪天=================
+    //大雪白天
+    static void doHeavySnowDayTime();
+    //大雪晚上
+    static void doHeavySnowNight();
+    //小雪白天
+    static void doLightSnowDayTime();
+    //小雪晚上
+    static void doLightSnowNight();
     
     //============晴天=================
-    //晴天晚上
-    static void doSunnyNight();
     //晴天白天
     static void doSunnyDayTime();
+    //晴天晚上
+    static void doSunnyNight();
     
+    //============多云=================
+    //多云白天
+    static void doCloudyDayTime();
+    //多云晚上
+    static void doCloudyNight();
     
+    //============ 大风================
+    //大风白天
+    static void doWindyDayTime();
+    
+    //大风晚上
+     static void doWindyNight();
     
 };
 
