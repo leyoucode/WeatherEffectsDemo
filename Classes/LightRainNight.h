@@ -20,6 +20,9 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::CCScene* scene();
     
+    void onExit();
+    void onEnterTransitionDidFinish();
+    
     virtual void bgSpriteMoveFinished();
     
     // implement the "static node()" method manually

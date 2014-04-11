@@ -8,6 +8,7 @@
 
 #include "SunnyDayTime.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -114,4 +115,23 @@ void SunnyDayTime::changeSunAlpha()
     }
     sunSprite -> setOpacity(sunSpriteOpacity);
     
+}
+
+void SunnyDayTime::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void SunnyDayTime::onEnterTransitionDidFinish()
+{
+    CCActionInterval *birdcallDelayTime = CCDelayTime::create(10);
+    CCActionInstant *birdcallcallFunc = CCCallFuncN::create(this, callfuncN_selector(SunnyDayTime::playBirdcall));
+    this->runAction(CCRepeatForever::create(CCSequence::create(birdcallcallFunc,birdcallDelayTime,NULL)));
+}
+
+void SunnyDayTime::playBirdcall(CCNode *node)
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "bird.wav", false);
 }

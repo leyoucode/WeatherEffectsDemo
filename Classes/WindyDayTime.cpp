@@ -35,83 +35,35 @@ bool WindyDayTime::init()
         return false;
     }
     
-    //CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    //CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-    
     CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
     CCSprite *bgSprite = CCSprite::create("bg_na.jpg");
     float bgSpritespx = bgSprite->getTextureRect().getMaxX();
     float bgSpritespy = bgSprite->getTextureRect().getMaxY();
     // position the sprite on the center of the screen
-    bgSprite->setPosition(ccp(0,size.height/2));
-    bgSprite->setScaleX(size.width/bgSpritespx*2);
+    bgSprite->setPosition(ccp(size.width/2,size.height/2));
+    bgSprite->setScaleX(size.width/bgSpritespx);
     bgSprite->setScaleY(size.height/bgSpritespy);
     // add the sprite as a child to this layer
     this->addChild(bgSprite, 0);
     
-    //背景移动
-    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(WindyDayTime::bgSpriteMoveFinished));
-    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
-    
     float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
-    //太阳图片
-    CCSprite *sunSprite = CCSprite::create("sun_small.png");
-    sunSprite->setTag(1);
-    sunSprite->setScale(scale);
-    sunSprite->setPosition(ccp(size.width- 100, size.height- 100));
-    sunSpriteOpacity = sunSprite->getOpacity();
-    this->addChild(sunSprite);
-    //太阳若隐若现效果
-    this->schedule(schedule_selector(WindyDayTime::changeSunAlpha), 0.1f);
+    //风车叶子图片
+    CCSprite *windmillSprite = CCSprite::create("na_windmill.png");
+    windmillSprite->setScale(scale);
+    float windmillX = size.width / (320.0f / 120.0f);
+    float windmillY = size.height / (480.0f / 290.0f);
     
-    //太阳光柱图片
-    CCSprite *sunshineSprite = CCSprite::create("sunshine.png");
-    sunshineSprite->setScale(scale);
-    sunshineSprite->setPosition(ccp(size.width- 100, size.height- 100));
-    this->addChild(sunshineSprite);
+    windmillSprite->setPosition(ccp(windmillX, windmillY));
+    this->addChild(windmillSprite);
     
-    CCFiniteTimeAction *rot1 = CCRotateTo::create(26.0f, 180);
-    CCFiniteTimeAction *rot2 = CCRotateTo::create(26.0f, 360);
-    CCFadeOut * fadeOut=CCFadeOut::create(13.0f);
-    CCFadeIn * fadeIn=CCFadeIn::create(13.0f);
+    CCFiniteTimeAction *rot1 = CCRotateTo::create(20.0f, 180);
+    CCFiniteTimeAction *rot2 = CCRotateTo::create(20.0f, 360);
     //太阳光柱旋转动画
-    sunshineSprite->runAction(CCRepeatForever::create(CCSequence::create(rot1,rot2,NULL)));
-    //太阳光柱淡入淡出
-    sunshineSprite->runAction(CCRepeatForever::create(CCSequence::create(fadeOut,fadeIn,NULL)));
+    windmillSprite->runAction(CCRepeatForever::create(CCSequence::create(rot1,rot2,NULL)));
+    
     
     return true;
 }
 
-//当背景图片移动完毕 再次切换到当前场景
-void WindyDayTime::bgSpriteMoveFinished()
-{
-    WeatherEffectsUtils::doSunnyDayTime();
-}
-
-
-//改变太阳图片的Alpha值 实现太阳若影若现的效果
-void WindyDayTime::changeSunAlpha()
-{
-    
-    CCSprite  *sunSprite = (CCSprite*)this->getChildByTag(1);
-    //0 – totally transparent, 255 – opaque
-    
-    if (isSunSpriteOpacityAdd) {
-        sunSpriteOpacity = sunSpriteOpacity + 1;
-    }else{
-        sunSpriteOpacity = sunSpriteOpacity - 1;
-    }
-    
-    if (sunSpriteOpacity >= 255) {
-        sunSpriteOpacity = 255;
-        isSunSpriteOpacityAdd = false;
-    }else if(sunSpriteOpacity <= 220){
-        sunSpriteOpacity = 220;
-        isSunSpriteOpacityAdd = true;
-    }
-    sunSprite -> setOpacity(sunSpriteOpacity);
-    
-}

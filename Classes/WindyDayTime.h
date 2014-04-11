@@ -25,15 +25,6 @@ public:
     // implement the "static node()" method manually
     CREATE_FUNC(WindyDayTime);
     
-private:
-    
-    int sunSpriteOpacity;
-    
-    bool isSunSpriteOpacityAdd;
-    
-    virtual void changeSunAlpha();
-    
-    virtual void bgSpriteMoveFinished();
 };
 
 #endif

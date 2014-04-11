@@ -134,28 +134,28 @@ static AppDelegate s_sharedApplication;
     [viewController.view addSubview:btn10];
     
     UIButton *btn11 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn11.frame = CGRectMake(0, 200, 80, 40);
+    btn11.frame = CGRectMake(0, 250, 80, 40);
     [btn11 setTitle:@"大雪白天" forState:UIControlStateNormal];
     btn11.tag = 11;
     [btn11 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [viewController.view addSubview:btn11];
     
     UIButton *btn12 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn12.frame = CGRectMake(80, 200, 80, 40);
+    btn12.frame = CGRectMake(80, 250, 80, 40);
     [btn12 setTitle:@"大雪晚上" forState:UIControlStateNormal];
     btn12.tag = 12;
     [btn12 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [viewController.view addSubview:btn12];
     
     UIButton *btn13 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn13.frame = CGRectMake(160, 200, 80, 40);
+    btn13.frame = CGRectMake(160, 250, 80, 40);
     [btn13 setTitle:@"小雪白天" forState:UIControlStateNormal];
     btn13.tag = 13;
     [btn13 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [viewController.view addSubview:btn13];
     
     UIButton *btn14 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn14.frame = CGRectMake(240, 200, 80, 40);
+    btn14.frame = CGRectMake(240, 250, 80, 40);
     [btn14 setTitle:@"小雪晚上" forState:UIControlStateNormal];
     btn14.tag = 14;
     [btn14 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];

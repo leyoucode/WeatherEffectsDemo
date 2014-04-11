@@ -22,6 +22,9 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::CCScene* scene();
     
+    void onExit();
+    void onEnterTransitionDidFinish();
+    
     // implement the "static node()" method manually
     CREATE_FUNC(SunnyDayTime);
     
@@ -34,6 +37,8 @@ private:
     virtual void changeSunAlpha();
     
      virtual void bgSpriteMoveFinished();
+    
+    virtual void playBirdcall(CCNode *node);
 };
 
 #endif

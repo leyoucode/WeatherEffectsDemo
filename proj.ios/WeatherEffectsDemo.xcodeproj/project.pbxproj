@@ -80,6 +80,11 @@
 		01AEA8E018F6A08F00F10C4F /* LightRainNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8DF18F6A08F00F10C4F /* LightRainNight.cpp */; };
 		01AEA8E418F6A30400F10C4F /* WindyNight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8E218F6A30400F10C4F /* WindyNight.cpp */; };
 		01AEA8E618F6A32E00F10C4F /* WindyDayTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01AEA8E518F6A32E00F10C4F /* WindyDayTime.cpp */; };
+		01AEA8E818F7783500F10C4F /* na_windmill.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8E718F7783500F10C4F /* na_windmill.png */; };
+		01AEA8EE18F78CC900F10C4F /* bird.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8EB18F78CC900F10C4F /* bird.wav */; };
+		01AEA8EF18F78CC900F10C4F /* rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8EC18F78CC900F10C4F /* rain.wav */; };
+		01AEA8F018F78CC900F10C4F /* windy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8ED18F78CC900F10C4F /* windy.mp3 */; };
+		01AEA8F218F78EC600F10C4F /* thunder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01AEA8F118F78EC600F10C4F /* thunder.wav */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
 		15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88D1682F7D5002FB0C5 /* b2CollideCircle.cpp */; };
 		15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88E1682F7D5002FB0C5 /* b2CollideEdge.cpp */; };
@@ -437,6 +442,11 @@
 		01AEA8E218F6A30400F10C4F /* WindyNight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindyNight.cpp; path = ../Classes/WindyNight.cpp; sourceTree = "<group>"; };
 		01AEA8E318F6A30400F10C4F /* WindyNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindyNight.h; path = ../Classes/WindyNight.h; sourceTree = "<group>"; };
 		01AEA8E518F6A32E00F10C4F /* WindyDayTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindyDayTime.cpp; path = ../Classes/WindyDayTime.cpp; sourceTree = "<group>"; };
+		01AEA8E718F7783500F10C4F /* na_windmill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = na_windmill.png; sourceTree = "<group>"; };
+		01AEA8EB18F78CC900F10C4F /* bird.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bird.wav; sourceTree = "<group>"; };
+		01AEA8EC18F78CC900F10C4F /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
+		01AEA8ED18F78CC900F10C4F /* windy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = windy.mp3; sourceTree = "<group>"; };
+		01AEA8F118F78EC600F10C4F /* thunder.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = thunder.wav; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		15A3D8891682F7D5002FB0C5 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
@@ -2128,6 +2138,11 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01AEA8F118F78EC600F10C4F /* thunder.wav */,
+				01AEA8EB18F78CC900F10C4F /* bird.wav */,
+				01AEA8EC18F78CC900F10C4F /* rain.wav */,
+				01AEA8ED18F78CC900F10C4F /* windy.mp3 */,
+				01AEA8E718F7783500F10C4F /* na_windmill.png */,
 				01AEA8DC18F69FC000F10C4F /* light_rain.plist */,
 				01AEA8DA18F69F9100F10C4F /* heavy_rain.plist */,
 				01AEA8D518F6989100F10C4F /* light_snow.plist */,
@@ -2252,9 +2267,11 @@
 				01AEA86918F3F37B00F10C4F /* bg14_day_snow.jpg in Resources */,
 				01AEA8DD18F69FC000F10C4F /* light_rain.plist in Resources */,
 				01AEA87E18F3F37B00F10C4F /* blur_bg_rain_night.jpg in Resources */,
+				01AEA8F218F78EC600F10C4F /* thunder.wav in Resources */,
 				01AEA8A818F550CE00F10C4F /* sun_small.png in Resources */,
 				01AEA87518F3F37B00F10C4F /* blur_bg0_fine_night.jpg in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
+				01AEA8E818F7783500F10C4F /* na_windmill.png in Resources */,
 				01AEA86E18F3F37B00F10C4F /* bg_na.jpg in Resources */,
 				01AEA84518F3F2B300F10C4F /* fog.png in Resources */,
 				01AEA87C18F3F37B00F10C4F /* blur_bg_overcast.jpg in Resources */,
@@ -2267,6 +2284,7 @@
 				01AEA84718F3F2B300F10C4F /* light2.plist in Resources */,
 				01AEA8D618F6989100F10C4F /* light_snow.plist in Resources */,
 				01AEA87118F3F37B00F10C4F /* bg_rain_night.jpg in Resources */,
+				01AEA8EE18F78CC900F10C4F /* bird.wav in Resources */,
 				01AEA88018F3F37B00F10C4F /* blur_bg_thunder_storm.jpg in Resources */,
 				01AEA89D18F5336200F10C4F /* moon_3_4.png in Resources */,
 				01AEA8B018F6621A00F10C4F /* ld_bg_cloudy_day_time.jpg in Resources */,
@@ -2292,7 +2310,9 @@
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				01AEA87B18F3F37B00F10C4F /* blur_bg_na.jpg in Resources */,
 				01AEA88318F3F3F900F10C4F /* clouds.plist in Resources */,
+				01AEA8F018F78CC900F10C4F /* windy.mp3 in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
+				01AEA8EF18F78CC900F10C4F /* rain.wav in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				01AEA86C18F3F37B00F10C4F /* bg1_cloudy_night.jpg in Resources */,
 				01AEA89B18F5332500F10C4F /* star_flicker16.png in Resources */,
@@ -2570,8 +2590,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shang Weisi (GDSY2JR36J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shang Weisi (GDSY2JR36J)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -2607,8 +2627,8 @@
 				);
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = WeatherEffectsDemo;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "3A87BD75-FD4C-47C2-AF4B-DB10D76EE5C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3A87BD75-FD4C-47C2-AF4B-DB10D76EE5C4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2620,8 +2640,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shang Weisi (GDSY2JR36J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shang Weisi (GDSY2JR36J)";
 				COPY_PHASE_STRIP = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2654,8 +2674,8 @@
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
 				PRODUCT_NAME = WeatherEffectsDemo;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "3A87BD75-FD4C-47C2-AF4B-DB10D76EE5C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3A87BD75-FD4C-47C2-AF4B-DB10D76EE5C4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2667,6 +2687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2680,6 +2701,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

@@ -8,6 +8,7 @@
 
 #include "LightSnowDayTime.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -61,11 +62,22 @@ bool LightSnowDayTime::init()
     
     this->addChild(snowEffect);
     
-    
     return true;
 }
 
 void LightSnowDayTime::bgSpriteMoveFinished()
 {
     WeatherEffectsUtils::doLightSnowDayTime();
+}
+
+void LightSnowDayTime::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void LightSnowDayTime::onEnterTransitionDidFinish()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "windy.mp3", true);
 }

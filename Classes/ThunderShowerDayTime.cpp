@@ -8,6 +8,7 @@
 
 #include "ThunderShowerDayTime.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -35,6 +36,7 @@ bool ThunderShowerDayTime::init()
         return false;
     }
     
+    
     CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     
     CCSprite *bgSprite = CCSprite::create("ld_bg_rain_day_time.jpg");
@@ -48,7 +50,7 @@ bool ThunderShowerDayTime::init()
     this->addChild(bgSprite, 0);
     
     //背景移动
-    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
+    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/4,ccp(size.width, size.height/2) );
     CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::bgSpriteMoveFinished));
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
     
@@ -74,16 +76,53 @@ bool ThunderShowerDayTime::init()
     light1Effect->setPosition(ccp(size.width/2,size.height));
     light1Effect->setScale(scale);
     this->addChild(light1Effect);
+    light1Effect->setVisible(false);
+    
+    CCActionInterval *light1DelayTime = CCDelayTime::create(10);
+    CCActionInstant *light1callFunc = CCCallFuncN::create(this, callfuncN_selector(ThunderShowerDayTime::lightPreShow));
+    light1Effect->runAction(CCRepeatForever::create(CCSequence::create(light1DelayTime,light1callFunc,NULL)));
     
     CCParticleSystemQuad *light2Effect = CCParticleSystemQuad::create("light2.plist");
     light2Effect->setPosition(ccp(size.width/2,size.height));
     light2Effect->setScale(scale);
     this->addChild(light2Effect);
+    light2Effect->setVisible(false);
+    
+    CCActionInterval *light2DelayTime = CCDelayTime::create(10);
+    CCActionInstant *light2callFunc = CCCallFuncN::create(this, callfuncN_selector(ThunderShowerDayTime::lightPreShow));
+    light2Effect->runAction(CCRepeatForever::create(CCSequence::create(light2DelayTime,light2callFunc,NULL)));
+    
     
     return true;
+}
+
+void ThunderShowerDayTime::lightPreShow(CCNode *node)
+{
+    CCLOG("lightPreShow");
+    CCParticleSystemQuad *light1Effect = (CCParticleSystemQuad*)node;
+    bool lightIsVisible = light1Effect->isVisible();
+    if (lightIsVisible) {
+        light1Effect ->setVisible(false);
+    }else{
+    light1Effect ->setVisible(true);
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(
+                                                                     "thunder.wav");
+    }
 }
 
 void ThunderShowerDayTime::bgSpriteMoveFinished()
 {
     WeatherEffectsUtils::doThunderShowerDayTime();
+}
+
+void ThunderShowerDayTime::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void ThunderShowerDayTime::onEnterTransitionDidFinish()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "rain.wav", true);
 }

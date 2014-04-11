@@ -8,6 +8,7 @@
 
 #include "HeavyRainNight.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -65,12 +66,22 @@ bool HeavyRainNight::init()
     cloudEffect->setScale(scale);
     this->addChild(cloudEffect);
     
-    
     return true;
 }
 
 void HeavyRainNight::bgSpriteMoveFinished()
 {
-    CCLOG("background image move finished");
     WeatherEffectsUtils::doHeavyRainNight();
+}
+
+void HeavyRainNight::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void HeavyRainNight::onEnterTransitionDidFinish()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "rain.wav", true);
 }

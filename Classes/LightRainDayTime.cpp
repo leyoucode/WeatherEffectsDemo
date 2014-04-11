@@ -8,6 +8,7 @@
 
 #include "LightRainDayTime.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -65,11 +66,22 @@ bool LightRainDayTime::init()
     cloudEffect->setScale(scale);
     this->addChild(cloudEffect);
     
-    
     return true;
 }
 
 void LightRainDayTime::bgSpriteMoveFinished()
 {
     WeatherEffectsUtils::doLightRainDayTime();
+}
+
+void LightRainDayTime::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void LightRainDayTime::onEnterTransitionDidFinish()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "rain.wav", true);
 }

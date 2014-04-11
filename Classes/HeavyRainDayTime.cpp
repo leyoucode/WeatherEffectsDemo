@@ -8,6 +8,7 @@
 
 #include "HeavyRainDayTime.h"
 #import "WeatherEffectsUtils.h"
+#import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -64,8 +65,7 @@ bool HeavyRainDayTime::init()
     cloudEffect->setPosition(ccp(0,size.height+65));
     cloudEffect->setScale(scale);
     this->addChild(cloudEffect);
-    
-    
+
     return true;
 }
 
@@ -73,4 +73,16 @@ void HeavyRainDayTime::bgSpriteMoveFinished()
 {
     CCLOG("background image move finished");
     WeatherEffectsUtils::doHeavyRainDayTime();
+}
+
+void HeavyRainDayTime::onExit()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+}
+
+void HeavyRainDayTime::onEnterTransitionDidFinish()
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "rain.wav", true);
 }
