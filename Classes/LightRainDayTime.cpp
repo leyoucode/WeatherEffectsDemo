@@ -19,7 +19,7 @@ CCScene* LightRainDayTime::scene()
     
     // 'layer' is an autorelease object
     LightRainDayTime *layer = LightRainDayTime::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -71,17 +71,23 @@ bool LightRainDayTime::init()
 
 void LightRainDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doLightRainDayTime();
+    WeatherEffectsUtils::doLightRainDayTime(isPlaySound);
 }
 
 void LightRainDayTime::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    }
+    
 }
 
 void LightRainDayTime::onEnterTransitionDidFinish()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "rain.wav", true);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "rain.wav", true);
+    }
+    
 }

@@ -19,7 +19,7 @@ CCScene* ThunderShowerNight::scene()
     
     // 'layer' is an autorelease object
     ThunderShowerNight *layer = ThunderShowerNight::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -106,24 +106,30 @@ void ThunderShowerNight::lightPreShow(CCNode *node)
         light1Effect ->setVisible(false);
     }else{
         light1Effect ->setVisible(true);
-        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(
-                                                                     "thunder.wav");
+        if (isPlaySound) {
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(
+                                                                         "thunder.wav");
+        }
     }
 }
 
 void ThunderShowerNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doThunderShowerNight();
+    WeatherEffectsUtils::doThunderShowerNight(isPlaySound);
 }
 
 void ThunderShowerNight::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    }
 }
 
 void ThunderShowerNight::onEnterTransitionDidFinish()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "rain.wav", true);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "rain.wav", true);
+    }
 }

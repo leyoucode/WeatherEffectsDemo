@@ -18,7 +18,7 @@ CCScene* SunnyNight::scene()
     
     // 'layer' is an autorelease object
     SunnyNight *layer = SunnyNight::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -173,7 +173,7 @@ bool SunnyNight::init()
 //当背景图片移动完毕 再次切换到当前场景
 void SunnyNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doSunnyNight();
+    WeatherEffectsUtils::doSunnyNight(isPlaySound);
 }
 
 //改变太阳图片的Alpha值 实现太阳若影若现的效果

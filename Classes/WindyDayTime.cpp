@@ -18,7 +18,7 @@ CCScene* WindyDayTime::scene()
     
     // 'layer' is an autorelease object
     WindyDayTime *layer = WindyDayTime::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     

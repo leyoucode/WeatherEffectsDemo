@@ -18,7 +18,7 @@ CCScene* CloudyDayTime::scene()
     
     // 'layer' is an autorelease object
     CloudyDayTime *layer = CloudyDayTime::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -149,6 +149,6 @@ void CloudyDayTime::cloudy4SpriteMoveFinished(CCNode *sender)
 //当背景图片移动完毕 再次切换到当前场景
 void CloudyDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doCloudyDayTime();
+    WeatherEffectsUtils::doCloudyDayTime(isPlaySound);
 }
 

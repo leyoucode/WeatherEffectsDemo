@@ -18,7 +18,7 @@ CCScene* CloudyNight::scene()
     
     // 'layer' is an autorelease object
     CloudyNight *layer = CloudyNight::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -149,5 +149,5 @@ void CloudyNight::cloudy4SpriteMoveFinished(CCNode *sender)
 //当背景图片移动完毕 再次切换到当前场景
 void CloudyNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doCloudyNight();
+    WeatherEffectsUtils::doCloudyNight(isPlaySound);
 }

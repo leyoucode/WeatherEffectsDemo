@@ -19,7 +19,7 @@ CCScene* LightSnowNight::scene()
     
     // 'layer' is an autorelease object
     LightSnowNight *layer = LightSnowNight::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -67,17 +67,21 @@ bool LightSnowNight::init()
 
 void LightSnowNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doLightSnowNight();
+    WeatherEffectsUtils::doLightSnowNight(isPlaySound);
 }
 
 void LightSnowNight::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    }
 }
 
 void LightSnowNight::onEnterTransitionDidFinish()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "windy.mp3", true);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "windy.mp3", true);
+    }
 }

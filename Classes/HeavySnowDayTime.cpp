@@ -20,7 +20,7 @@ CCScene* HeavySnowDayTime::scene()
     
     // 'layer' is an autorelease object
     HeavySnowDayTime *layer = HeavySnowDayTime::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -68,17 +68,22 @@ bool HeavySnowDayTime::init()
 
 void HeavySnowDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doHeavySnowDayTime();
+    WeatherEffectsUtils::doHeavySnowDayTime(isPlaySound);
 }
 
 void HeavySnowDayTime::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    }
+    
 }
 
 void HeavySnowDayTime::onEnterTransitionDidFinish()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "windy.mp3", true);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "windy.mp3", true);
+    }
 }

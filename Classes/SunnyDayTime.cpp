@@ -19,7 +19,7 @@ CCScene* SunnyDayTime::scene()
     
     // 'layer' is an autorelease object
     SunnyDayTime *layer = SunnyDayTime::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -89,7 +89,7 @@ bool SunnyDayTime::init()
 //当背景图片移动完毕 再次切换到当前场景
 void SunnyDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doSunnyDayTime();
+    WeatherEffectsUtils::doSunnyDayTime(isPlaySound);
 }
 
 
@@ -132,6 +132,8 @@ void SunnyDayTime::onEnterTransitionDidFinish()
 
 void SunnyDayTime::playBirdcall(CCNode *node)
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "bird.wav", false);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "bird.wav", false);
+    }
 }

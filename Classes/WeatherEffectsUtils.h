@@ -10,6 +10,7 @@
 #define WeatherEffectsDemo_WeatherEffectsUtils_h
 
 #define TRANSACTION_DURATION 0.8f
+#define LAYER_TAG -999
 
 //daytime night
 
@@ -25,46 +26,46 @@ public:
     
     //============雨天=================
     // 雷阵雨白天
-    static void doThunderShowerDayTime();
+    static void doThunderShowerDayTime(bool isPlaySound);
     // 雷阵雨晚上
-    static void doThunderShowerNight();
+    static void doThunderShowerNight(bool isPlaySound);
     // 大雨白天
-    static void doHeavyRainDayTime();
+    static void doHeavyRainDayTime(bool isPlaySound);
     // 大雨晚上
-    static void doHeavyRainNight();
+    static void doHeavyRainNight(bool isPlaySound);
     // 小雨白天
-    static void doLightRainDayTime();
+    static void doLightRainDayTime(bool isPlaySound);
     // 小雨晚上
-    static void doLightRainNight();
+    static void doLightRainNight(bool isPlaySound);
     
     //============雪天=================
     //大雪白天
-    static void doHeavySnowDayTime();
+    static void doHeavySnowDayTime(bool isPlaySound);
     //大雪晚上
-    static void doHeavySnowNight();
+    static void doHeavySnowNight(bool isPlaySound);
     //小雪白天
-    static void doLightSnowDayTime();
+    static void doLightSnowDayTime(bool isPlaySound);
     //小雪晚上
-    static void doLightSnowNight();
+    static void doLightSnowNight(bool isPlaySound);
     
     //============晴天=================
     //晴天白天
-    static void doSunnyDayTime();
+    static void doSunnyDayTime(bool isPlaySound);
     //晴天晚上
-    static void doSunnyNight();
+    static void doSunnyNight(bool isPlaySound);
     
     //============多云=================
     //多云白天
-    static void doCloudyDayTime();
+    static void doCloudyDayTime(bool isPlaySound);
     //多云晚上
-    static void doCloudyNight();
+    static void doCloudyNight(bool isPlaySound);
     
     //============ 大风================
     //大风白天
-    static void doWindyDayTime();
+    static void doWindyDayTime(bool isPlaySound);
     
     //大风晚上
-     static void doWindyNight();
+     static void doWindyNight(bool isPlaySound);
     
 };
 

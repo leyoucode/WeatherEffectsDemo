@@ -182,52 +182,52 @@ static AppDelegate s_sharedApplication;
 {
     switch (btn.tag) {
         case 1://雷阵雨白天
-            WeatherEffectsUtils::doThunderShowerDayTime();
+            WeatherEffectsUtils::doThunderShowerDayTime(true);
             break;
         case 2://雷阵雨晚上
-            WeatherEffectsUtils::doThunderShowerNight();
+            WeatherEffectsUtils::doThunderShowerNight(true);
             break;
         case 3://大雨白天
-            WeatherEffectsUtils::doHeavyRainDayTime();
+            WeatherEffectsUtils::doHeavyRainDayTime(true);
             break;
         case 4://大雨晚上
-            WeatherEffectsUtils::doHeavyRainNight();
+            WeatherEffectsUtils::doHeavyRainNight(true);
             break;
         case 5://晴天白天
-            WeatherEffectsUtils::doSunnyDayTime();
+            WeatherEffectsUtils::doSunnyDayTime(true);
             break;
         case 6://晴天晚上
-            WeatherEffectsUtils::doSunnyNight();
+            WeatherEffectsUtils::doSunnyNight(true);
             break;
         case 7://多云白天
-            WeatherEffectsUtils::doCloudyDayTime();
+            WeatherEffectsUtils::doCloudyDayTime(true);
             break;
         case 8://多云晚上
-            WeatherEffectsUtils::doCloudyNight();
+            WeatherEffectsUtils::doCloudyNight(true);
             break;
         case 9://小雨白天
-            WeatherEffectsUtils::doLightRainDayTime();
+            WeatherEffectsUtils::doLightRainDayTime(true);
             break;
         case 10://小雨晚上
-            WeatherEffectsUtils::doLightRainNight();
+            WeatherEffectsUtils::doLightRainNight(true);
             break;
         case 11://大雪白天
-            WeatherEffectsUtils::doHeavySnowDayTime();
+            WeatherEffectsUtils::doHeavySnowDayTime(true);
             break;
         case 12://大雪晚上
-            WeatherEffectsUtils::doHeavySnowNight();
+            WeatherEffectsUtils::doHeavySnowNight(true);
             break;
         case 13://小雪白天
-            WeatherEffectsUtils::doLightSnowDayTime();
+            WeatherEffectsUtils::doLightSnowDayTime(true);
             break;
         case 14://小雪晚上
-            WeatherEffectsUtils::doLightSnowNight();
+            WeatherEffectsUtils::doLightSnowNight(true);
             break;
         case 15://大风白天
-            WeatherEffectsUtils::doWindyDayTime();
+            WeatherEffectsUtils::doWindyDayTime(true);
             break;
         case 16://大风晚上
-            WeatherEffectsUtils::doWindyNight();
+            WeatherEffectsUtils::doWindyNight(true);
             break;
         default:
             break;

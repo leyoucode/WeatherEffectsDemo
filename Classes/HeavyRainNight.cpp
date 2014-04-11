@@ -19,7 +19,7 @@ CCScene* HeavyRainNight::scene()
     
     // 'layer' is an autorelease object
     HeavyRainNight *layer = HeavyRainNight::create();
-    
+    layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
     
@@ -71,17 +71,22 @@ bool HeavyRainNight::init()
 
 void HeavyRainNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doHeavyRainNight();
+    WeatherEffectsUtils::doHeavyRainNight(false);
 }
 
 void HeavyRainNight::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    }
 }
 
 void HeavyRainNight::onEnterTransitionDidFinish()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                          "rain.wav", true);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "rain.wav", true);
+    }
+    
 }
