@@ -206,7 +206,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/test.o: \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/jni.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/jni/JniHelper.h \
  jni/hellocpp/test.h jni/hellocpp/JniTest.h \
- jni/../../Classes/ThunderShower.h
+ jni/../../Classes/ThunderShowerDayTime.h \
+ jni/../../Classes/WeatherEffectsUtils.h
 
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h:
 
@@ -622,4 +623,6 @@ jni/hellocpp/test.h:
 
 jni/hellocpp/JniTest.h:
 
-jni/../../Classes/ThunderShower.h:
+jni/../../Classes/ThunderShowerDayTime.h:
+
+jni/../../Classes/WeatherEffectsUtils.h:

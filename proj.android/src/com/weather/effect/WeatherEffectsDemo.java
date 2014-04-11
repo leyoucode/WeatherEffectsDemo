@@ -27,9 +27,12 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
 public class WeatherEffectsDemo extends Cocos2dxActivity{
@@ -41,32 +44,98 @@ public class WeatherEffectsDemo extends Cocos2dxActivity{
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
 		
-		FrameLayout fl = (FrameLayout)glSurfaceView.getParent();
-    	
-		Button btn = new Button(this);
-		btn.setText("Test");
-		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		btn.setLayoutParams(lp);
 		
-		btn.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				Cocos2dxGLSurfaceView.getInstance().queueEvent(new Runnable() {
-		               @Override
-		               public void run() {
-		            	   CallWeather.doRain("123");
-		               }
-		           });
-
-				
-				
-			}
-		});
-		fl.addView(btn);
+		View myView = LayoutInflater.from(this).inflate(R.layout.activity_main, null);
+		
+		myView.findViewById(R.id.lybt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.lyws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dybt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dyws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.xybt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.xyws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.qtbt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.qtws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.duoybt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.duoyws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dfbt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dfws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dxbt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.dxws).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.xxbt).setOnClickListener(onBtnClick);
+		myView.findViewById(R.id.xxws).setOnClickListener(onBtnClick);
+		
+		FrameLayout fl = (FrameLayout)glSurfaceView.getParent();
+		fl.addView(myView);
 	}
 
+    
+    private View.OnClickListener onBtnClick = new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			final int id = v.getId();
+			Cocos2dxGLSurfaceView.getInstance().queueEvent(new Runnable() {
+	               @Override
+	               public void run() {
+	            	   switch (id) {
+	       			case R.id.lybt:
+	       				CallWeatherEffects.doThunderShowerDayTime(true);
+	       				break;
+	       			case R.id.lyws:
+	       				CallWeatherEffects.doThunderShowerNight(true);
+	       				break;
+	       			case R.id.dybt:
+	       				CallWeatherEffects.doHeavyRainDayTime(true);
+	       				break;
+	       			case R.id.dyws:
+	       				CallWeatherEffects.doHeavyRainNight(true);
+	       				break;
+	       			case R.id.xybt:
+	       				CallWeatherEffects.doLightRainDayTime(true);
+	       				break;
+	       			case R.id.xyws:
+	       				CallWeatherEffects.doLightRainNight(true);
+	       				break;
+	       			case R.id.qtbt:
+	       				CallWeatherEffects.doSunnyDayTime(true);
+	       				break;
+	       			case R.id.qtws:
+	       				CallWeatherEffects.doSunnyNight(true);
+	       				break;
+	       			case R.id.duoybt:
+	       				CallWeatherEffects.doCloudyDayTime(true);
+	       				break;
+	       			case R.id.duoyws:
+	       				CallWeatherEffects.doCloudyNight(true);
+	       				break;
+	       			case R.id.dfbt:
+	       				CallWeatherEffects.doWindyDayTime(true);
+	       				break;
+	       			case R.id.dfws:
+	       				CallWeatherEffects.doWindyNight(true);
+	       				break;
+	       			case R.id.dxbt:
+	       				CallWeatherEffects.doHeavySnowDayTime(true);
+	       				break;
+	       			case R.id.dxws:
+	       				CallWeatherEffects.doHeavySnowNight(true);
+	       				break;
+	       			case R.id.xxbt:
+	       				CallWeatherEffects.doLightSnowDayTime(true);
+	       				break;
+	       			case R.id.xxws:
+	       				CallWeatherEffects.doLightSnowNight(true);
+	       				break;
+
+	       			default:
+	       				break;
+	       			}
+	               }
+	           });
+			
+		}
+	};
+    
     public Cocos2dxGLSurfaceView onCreateView() {
     	glSurfaceView = new Cocos2dxGLSurfaceView(this);
     	// WeatherEffectsDemo should create stencil buffer

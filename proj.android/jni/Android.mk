@@ -9,8 +9,24 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/HelloWorldScene.cpp \
-                   ../../Classes/ThunderShower.cpp \
-                   hellocpp/test.cpp
+                   ../../Classes/CloudyDayTime.cpp \
+                   ../../Classes/CloudyNight.cpp \
+                   ../../Classes/HeavyRainDayTime.cpp \
+                   ../../Classes/HeavyRainNight.cpp \
+                   ../../Classes/HeavySnowDayTime.cpp \
+                   ../../Classes/HeavySnowNight.cpp \
+                   ../../Classes/LightRainDayTime.cpp \
+                   ../../Classes/LightRainNight.cpp \
+                   ../../Classes/LightSnowDayTime.cpp \
+                   ../../Classes/LightSnowNight.cpp \
+                   ../../Classes/SunnyDayTime.cpp \
+                   ../../Classes/SunnyNight.cpp \
+                   ../../Classes/ThunderShowerDayTime.cpp \
+                   ../../Classes/ThunderShowerNight.cpp \
+                   ../../Classes/WeatherEffectsUtils.cpp \
+                   ../../Classes/WindyDayTime.cpp \
+                   ../../Classes/WindyNight.cpp \
+                   hellocpp/CallWeatherEffects.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

@@ -203,7 +203,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/data_support/uthash.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/component/CCComponent.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/component/CCComponentContainer.h \
- jni/../../Classes/HelloWorldScene.h
+ jni/../../Classes/HelloWorldScene.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/CocosDenshion/android/../include/SimpleAudioEngine.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/CocosDenshion/android/../include/Export.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -614,3 +616,7 @@ jni/../../Classes/AppDelegate.h:
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/component/CCComponentContainer.h:
 
 jni/../../Classes/HelloWorldScene.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/CocosDenshion/android/../include/SimpleAudioEngine.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/CocosDenshion/android/../include/Export.h:
