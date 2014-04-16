@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" 
+		android:layout_above="@+id/linear4">
+        <Button
+            android:id="@+id/lybt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="雷雨白天" />
+        <Button
+            android:id="@+id/lyws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="雷雨晚上" />
+        <Button
+            android:id="@+id/dybt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大雨白天" />
+        <Button
+            android:id="@+id/dyws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大雨晚上" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" 
+		android:layout_above="@+id/linear1">
+       <Button
+           android:id="@+id/xybt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小雨白天" />
+        <Button
+            android:id="@+id/xyws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小雨晚上" />
+        <Button
+            android:id="@+id/qtbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴天白天" />
+        <Button
+            android:id="@+id/qtws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴天晚上" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" 
+		android:layout_above="@+id/linear2">
+        <Button
+            android:id="@+id/duoybt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多云白天" />
+        <Button
+            android:id="@+id/duoyws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多云晚上" />
+        <Button
+            android:id="@+id/dfbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大风白天" />
+        <Button
+            android:id="@+id/dfws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大风晚上" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" 
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/dxbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大雪白天" />
+        <Button
+            android:id="@+id/dxws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大雪晚上" />
+        <Button
+            android:id="@+id/xxbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小雪白天" />
+        <Button
+            android:id="@+id/xxws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小雪晚上" />
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>
