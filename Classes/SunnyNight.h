@@ -12,9 +12,16 @@
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
 
+USING_NS_CC;
+
 class SunnyNight : public cocos2d::CCLayer
 {
 public:
+    
+    CCSize winSize;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
     
     //是否播放声音
     bool isPlaySound;
@@ -30,12 +37,6 @@ public:
     
 private:
     
-    int moonSpriteOpacity;
-    
-    bool isMoonSpriteOpacityAdd;
-    
-    virtual void changeMoonAlpha();
-    
-    virtual void bgSpriteMoveFinished();
+    virtual void moveBackgroundSprite(CCNode *node);
 };
 #endif

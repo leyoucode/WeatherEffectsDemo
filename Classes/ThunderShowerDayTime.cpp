@@ -97,35 +97,35 @@ bool ThunderShowerDayTime::init()
     CCFiniteTimeAction* cloud1ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy1SpriteMoveFinished));
     cloud1Sprite->runAction( CCSequence::create(cloud1ActionMove,cloud1ActionMoveDone, NULL) );
     
-    //云朵图片2
-    CCSprite *cloud2Sprite = CCSprite::create("dark_clouds_2.png");
-    cloud2Sprite->setPosition(ccp(size.width/2-150, size.height-50));
-    cloud2Sprite->setScale(scale);
-    this->addChild(cloud2Sprite);
-    //云层2移动
-    CCFiniteTimeAction* cloud2ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud2Sprite->getTextureRect().getMaxX(), size.height-100) );
-    CCFiniteTimeAction* cloud2ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy2SpriteMoveFinished));
-    cloud2Sprite->runAction( CCSequence::create(cloud2ActionMove,cloud2ActionMoveDone, NULL) );
-    
-    //云朵图片3
-    CCSprite *cloud3Sprite = CCSprite::create("dark_clouds_3.png");
-    cloud3Sprite->setPosition(ccp(size.width/2-300, size.height-50));
-    cloud3Sprite->setScale(scale);
-    this->addChild(cloud3Sprite);
-    //云层3移动
-    CCFiniteTimeAction* cloud3ActionMove = CCMoveTo::create( (float)size.width/5,ccp(size.width+cloud3Sprite->getTextureRect().getMaxX(), size.height-100) );
-    CCFiniteTimeAction* cloud3ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy3SpriteMoveFinished));
-    cloud3Sprite->runAction( CCSequence::create(cloud3ActionMove,cloud3ActionMoveDone, NULL) );
-    
-    //云朵图片4
-    CCSprite *cloud4Sprite = CCSprite::create("dark_clouds_4.png");
-    cloud4Sprite->setPosition(ccp(size.width/2-450, size.height-50));
-    cloud4Sprite->setScale(scale);
-    this->addChild(cloud4Sprite);
-    //云层4移动
-    CCFiniteTimeAction* cloud4ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud4Sprite->getTextureRect().getMaxX(), size.height-100) );
-    CCFiniteTimeAction* cloud4ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy4SpriteMoveFinished));
-    cloud4Sprite->runAction( CCSequence::create(cloud4ActionMove,cloud4ActionMoveDone, NULL) );
+//    //云朵图片2
+//    CCSprite *cloud2Sprite = CCSprite::create("dark_clouds_2.png");
+//    cloud2Sprite->setPosition(ccp(size.width/2-150, size.height-50));
+//    cloud2Sprite->setScale(scale);
+//    this->addChild(cloud2Sprite);
+//    //云层2移动
+//    CCFiniteTimeAction* cloud2ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud2Sprite->getTextureRect().getMaxX(), size.height-100) );
+//    CCFiniteTimeAction* cloud2ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy2SpriteMoveFinished));
+//    cloud2Sprite->runAction( CCSequence::create(cloud2ActionMove,cloud2ActionMoveDone, NULL) );
+//    
+//    //云朵图片3
+//    CCSprite *cloud3Sprite = CCSprite::create("dark_clouds_3.png");
+//    cloud3Sprite->setPosition(ccp(size.width/2-300, size.height-50));
+//    cloud3Sprite->setScale(scale);
+//    this->addChild(cloud3Sprite);
+//    //云层3移动
+//    CCFiniteTimeAction* cloud3ActionMove = CCMoveTo::create( (float)size.width/5,ccp(size.width+cloud3Sprite->getTextureRect().getMaxX(), size.height-100) );
+//    CCFiniteTimeAction* cloud3ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy3SpriteMoveFinished));
+//    cloud3Sprite->runAction( CCSequence::create(cloud3ActionMove,cloud3ActionMoveDone, NULL) );
+//    
+//    //云朵图片4
+//    CCSprite *cloud4Sprite = CCSprite::create("dark_clouds_4.png");
+//    cloud4Sprite->setPosition(ccp(size.width/2-450, size.height-50));
+//    cloud4Sprite->setScale(scale);
+//    this->addChild(cloud4Sprite);
+//    //云层4移动
+//    CCFiniteTimeAction* cloud4ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud4Sprite->getTextureRect().getMaxX(), size.height-100) );
+//    CCFiniteTimeAction* cloud4ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerDayTime::cloudy4SpriteMoveFinished));
+//    cloud4Sprite->runAction( CCSequence::create(cloud4ActionMove,cloud4ActionMoveDone, NULL) );
     
     return true;
 }
