@@ -106,7 +106,9 @@ void SunnyDayTime::moveBackgroundSprite(CCNode *sender)
 
 void SunnyDayTime::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopEffect(birdSound);
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopEffect(birdSound);
+    }
 }
 
 void SunnyDayTime::onEnterTransitionDidFinish()

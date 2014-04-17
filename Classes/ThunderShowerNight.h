@@ -12,9 +12,24 @@
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
 
+USING_NS_CC;
+
 class ThunderShowerNight : public cocos2d::CCLayer
 {
 public:
+    
+    CCSize winSize;
+    
+    float scale;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
+    
+    CCSprite *thunderlight1;
+    
+    CCSprite *thunderlight2;
+    
+    int thunderSound;//雷声
     
     //是否播放声音
     bool isPlaySound;
@@ -32,8 +47,16 @@ public:
     CREATE_FUNC(ThunderShowerNight);
     
 private:
-    virtual void bgSpriteMoveFinished();
-    virtual void lightPreShow(CCNode *node);
+    virtual void moveBackgroundSprite(CCNode *sender);
+    
+    virtual void showThunderLight(CCNode *node);
+    virtual void showThunderLightDone1();
+    virtual void showThunderLightDone2();
+    
+    virtual void cloudy1SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy2SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy3SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy4SpriteMoveFinished(CCNode *sender);
 };
 
 #endif
