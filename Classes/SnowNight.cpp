@@ -50,6 +50,9 @@ bool SnowNight::init()
     
     this->addChild(snowEffect);
     
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("windy.mp3");
+    }
     return true;
 }
 

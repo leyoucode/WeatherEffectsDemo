@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef WeatherEffectsDemo_LightRainDayTime_h
-#define WeatherEffectsDemo_LightRainDayTime_h
+#ifndef WeatherEffectsDemo_RainDayTime_h
+#define WeatherEffectsDemo_RainDayTime_h
 
 #include "cocos2d.h"
 USING_NS_CC;

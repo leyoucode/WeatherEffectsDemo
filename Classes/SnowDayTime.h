@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef WeatherEffectsDemo_LightSnowDayTime_h
-#define WeatherEffectsDemo_LightSnowDayTime_h
+#ifndef WeatherEffectsDemo_SnowDayTime_h
+#define WeatherEffectsDemo_SnowDayTime_h
 
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"

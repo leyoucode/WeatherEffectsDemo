@@ -50,11 +50,11 @@ bool SunnyNight::init()
     
     //月亮精灵
     CCSprite *moonSprite = CCSprite::create("moon.png");
-    moonSprite->setScale(scale);
+    //moonSprite->setScale(scale);
     moonSprite->setPosition(ccp(winSize.width-moonSprite->getContentSize().width-50, winSize.height - moonSprite->getContentSize().height-50));
     moonSprite->setRotation(-20);
     this->addChild(moonSprite);
-    
+
     //月亮若隐若现效果
     CCFadeTo *fadeToMix = CCFadeTo::create(1, 200);//0 – totally transparent, 255 – opaque
     CCFadeTo *fadeToMax = CCFadeTo::create(1, 255);

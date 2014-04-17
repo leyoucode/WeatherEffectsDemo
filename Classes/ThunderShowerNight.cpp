@@ -110,8 +110,10 @@ bool ThunderShowerNight::init()
     CCFiniteTimeAction* cloud4ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerNight::cloudy4SpriteMoveFinished));
     cloud4Sprite->runAction( CCSequence::create(cloud4ActionMove,cloud4ActionMoveDone, NULL) );
     
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("rain.wav");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("thunder.wav");
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("rain.wav");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("thunder.wav");
+    }
     
     return true;
 }

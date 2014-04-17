@@ -71,7 +71,10 @@ bool SunnyDayTime::init()
     CCRotateBy* actionSpin = CCRotateBy::create(180.0f,360);
     sunshineSprite->runAction(CCRepeatForever::create(CCSpawn::create(CCSequence::create(actionSpin,NULL),CCSequence::create(fadeIn,sunshineFadeDelayTime1,fadeOut,sunshineFadeDelayTime2,NULL),NULL)));
     
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("bird.wav");//欲加载鸟鸣声
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("bird.wav");//欲加载鸟鸣声
+    }
+    
     return true;
 }
 

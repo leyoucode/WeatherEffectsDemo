@@ -50,6 +50,9 @@ bool SnowDayTime::init()
     
     this->addChild(snowEffect);
     
+    if (isPlaySound) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("windy.mp3");
+    }
     return true;
 }
 
@@ -85,7 +88,6 @@ void SnowDayTime::onExit()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
     }
 }
 
