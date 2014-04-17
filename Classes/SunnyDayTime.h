@@ -12,9 +12,19 @@
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
 
+USING_NS_CC;
+
 class SunnyDayTime : public cocos2d::CCLayer
 {
 public:
+
+    CCSize winSize;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
+    
+    //鸟鸣声音
+    int birdSound;
     
     //是否播放声音
     bool isPlaySound;
@@ -33,13 +43,7 @@ public:
     
 private:
     
-    int sunSpriteOpacity;
-    
-    bool isSunSpriteOpacityAdd;
-    
-    virtual void changeSunAlpha();
-    
-     virtual void bgSpriteMoveFinished();
+     virtual void moveBackgroundSprite(CCNode *sender);
     
     virtual void playBirdcall(CCNode *node);
 };

@@ -31,4 +31,9 @@ public:
 private:
     virtual void bgSpriteMoveFinished();
     virtual void lightPreShow(CCNode *node);
+    
+    virtual void cloudy1SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy2SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy3SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy4SpriteMoveFinished(CCNode *sender);
 };

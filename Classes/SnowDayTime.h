@@ -1,17 +1,18 @@
 //
-//  Shower.h
+//  LightSnowDayTime.h
 //  WeatherEffectsDemo
 //
-//  Created by liu wei on 4/8/14.
+//  Created by liu wei on 4/10/14.
 //
 //
 
-#ifndef WeatherEffectsDemo_HeavyRainNight_h
-#define WeatherEffectsDemo_HeavyRainNight_h
+#ifndef WeatherEffectsDemo_LightSnowDayTime_h
+#define WeatherEffectsDemo_LightSnowDayTime_h
 
 #include "cocos2d.h"
+#import "WeatherEffectsUtils.h"
 
-class HeavyRainNight : public cocos2d::CCLayer
+class SnowDayTime : public cocos2d::CCLayer
 {
 public:
     
@@ -27,10 +28,11 @@ public:
     void onExit();
     void onEnterTransitionDidFinish();
     
-    virtual void bgSpriteMoveFinished();
-    
     // implement the "static node()" method manually
-    CREATE_FUNC(HeavyRainNight);
+    CREATE_FUNC(SnowDayTime);
+    
+private:
+    virtual void bgSpriteMoveFinished();
 };
 
 #endif

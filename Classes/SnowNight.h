@@ -1,18 +1,18 @@
 //
-//  LightSnowDayTime.h
+//  LightSnowNight.h
 //  WeatherEffectsDemo
 //
 //  Created by liu wei on 4/10/14.
 //
 //
 
-#ifndef WeatherEffectsDemo_LightSnowDayTime_h
-#define WeatherEffectsDemo_LightSnowDayTime_h
+#ifndef WeatherEffectsDemo_LightSnowNight_h
+#define WeatherEffectsDemo_LightSnowNight_h
 
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
 
-class LightSnowDayTime : public cocos2d::CCLayer
+class SnowNight : public cocos2d::CCLayer
 {
 public:
     
@@ -29,10 +29,11 @@ public:
     void onEnterTransitionDidFinish();
     
     // implement the "static node()" method manually
-    CREATE_FUNC(LightSnowDayTime);
+    CREATE_FUNC(SnowNight);
     
 private:
     virtual void bgSpriteMoveFinished();
 };
+
 
 #endif

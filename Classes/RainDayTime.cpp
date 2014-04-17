@@ -6,19 +6,19 @@
 //
 //
 
-#include "LightRainDayTime.h"
+#include "RainDayTime.h"
 #import "WeatherEffectsUtils.h"
 #import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
-CCScene* LightRainDayTime::scene()
+CCScene* RainDayTime::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    LightRainDayTime *layer = LightRainDayTime::create();
+    RainDayTime *layer = RainDayTime::create();
     layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
@@ -28,7 +28,7 @@ CCScene* LightRainDayTime::scene()
 }
 
 // on "init" you need to initialize your instance
-bool LightRainDayTime::init()
+bool RainDayTime::init()
 {
     // 1. super init first
     if ( !CCLayer::init() )
@@ -69,12 +69,12 @@ bool LightRainDayTime::init()
     return true;
 }
 
-void LightRainDayTime::bgSpriteMoveFinished()
+void RainDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doLightRainDayTime(isPlaySound);
+    WeatherEffectsUtils::doRainDayTime(isPlaySound);
 }
 
-void LightRainDayTime::onExit()
+void RainDayTime::onExit()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
@@ -83,7 +83,7 @@ void LightRainDayTime::onExit()
     
 }
 
-void LightRainDayTime::onEnterTransitionDidFinish()
+void RainDayTime::onEnterTransitionDidFinish()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(

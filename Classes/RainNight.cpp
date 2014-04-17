@@ -1,24 +1,24 @@
 //
-//  Shower.cpp
+//  LightRainNight.cpp
 //  WeatherEffectsDemo
 //
-//  Created by liu wei on 4/8/14.
+//  Created by liu wei on 4/10/14.
 //
 //
 
-#include "HeavyRainDayTime.h"
+#include "RainNight.h"
 #import "WeatherEffectsUtils.h"
 #import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
-CCScene* HeavyRainDayTime::scene()
+CCScene* RainNight::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    HeavyRainDayTime *layer = HeavyRainDayTime::create();
+    RainNight *layer = RainNight::create();
     layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
@@ -28,7 +28,7 @@ CCScene* HeavyRainDayTime::scene()
 }
 
 // on "init" you need to initialize your instance
-bool HeavyRainDayTime::init()
+bool RainNight::init()
 {
     // 1. super init first
     if ( !CCLayer::init() )
@@ -39,7 +39,7 @@ bool HeavyRainDayTime::init()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
-    CCSprite *bgSprite = CCSprite::create("ld_bg_rain_day_time.jpg");
+    CCSprite *bgSprite = CCSprite::create("ld_bg_rain_night.jpg");
     bgSprite->setScaleX(2);
     
     // position the sprite on the center of the screen
@@ -51,7 +51,7 @@ bool HeavyRainDayTime::init()
     CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
-    CCParticleSystemQuad *rainEffect = CCParticleSystemQuad::create("heavy_rain.plist");
+    CCParticleSystemQuad *rainEffect = CCParticleSystemQuad::create("light_rain.plist");
     //emitter1->setStartColor(ccc4f(1,0,0,1));
     //emitter1->setBlendAdditive(false);
     
@@ -65,24 +65,23 @@ bool HeavyRainDayTime::init()
     cloudEffect->setPosition(ccp(0,size.height+65));
     cloudEffect->setScale(scale);
     this->addChild(cloudEffect);
-
+    
     return true;
 }
 
-void HeavyRainDayTime::bgSpriteMoveFinished()
+void RainNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doHeavyRainDayTime(isPlaySound);
+    WeatherEffectsUtils::doRainDayTime(isPlaySound);
 }
 
-void HeavyRainDayTime::onExit()
+void RainNight::onExit()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
     }
 }
-
-void HeavyRainDayTime::onEnterTransitionDidFinish()
+void RainNight::onEnterTransitionDidFinish()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(

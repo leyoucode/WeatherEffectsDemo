@@ -1,17 +1,17 @@
 //
-//  LightRainNight.h
+//  LightRainDayTime.h
 //  WeatherEffectsDemo
 //
 //  Created by liu wei on 4/10/14.
 //
 //
 
-#ifndef WeatherEffectsDemo_LightRainNight_h
-#define WeatherEffectsDemo_LightRainNight_h
+#ifndef WeatherEffectsDemo_LightRainDayTime_h
+#define WeatherEffectsDemo_LightRainDayTime_h
 
 #include "cocos2d.h"
 
-class LightRainNight : public cocos2d::CCLayer
+class RainDayTime : public cocos2d::CCLayer
 {
 public:
     
@@ -30,7 +30,8 @@ public:
     virtual void bgSpriteMoveFinished();
     
     // implement the "static node()" method manually
-    CREATE_FUNC(LightRainNight);
+    CREATE_FUNC(RainDayTime);
 };
+
 
 #endif

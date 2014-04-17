@@ -1,24 +1,24 @@
 //
-//  HeavySnowNight.cpp
+//  LightSnowNight.cpp
 //  WeatherEffectsDemo
 //
 //  Created by liu wei on 4/10/14.
 //
 //
 
-#include "HeavySnowNight.h"
+#include "SnowNight.h"
 #import "WeatherEffectsUtils.h"
 #import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
-CCScene* HeavySnowNight::scene()
+CCScene* SnowNight::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    HeavySnowNight *layer = HeavySnowNight::create();
+    SnowNight *layer = SnowNight::create();
     layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
@@ -28,7 +28,7 @@ CCScene* HeavySnowNight::scene()
 }
 
 // on "init" you need to initialize your instance
-bool HeavySnowNight::init()
+bool SnowNight::init()
 {
     // 1. super init first
     if ( !CCLayer::init() )
@@ -50,12 +50,12 @@ bool HeavySnowNight::init()
     
     //背景移动
     CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(HeavySnowNight::bgSpriteMoveFinished));
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SnowNight::bgSpriteMoveFinished));
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
     
     float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
-    CCParticleSystemQuad *snowEffect = CCParticleSystemQuad::create("heavy_snow.plist");
+    CCParticleSystemQuad *snowEffect = CCParticleSystemQuad::create("light_snow.plist");
     snowEffect->setPosition(ccp(size.width/2-30, size.height));
     //rainEffect->setAnchorPoint(Point(0,0));
     snowEffect->setScale(scale);
@@ -65,12 +65,12 @@ bool HeavySnowNight::init()
     return true;
 }
 
-void HeavySnowNight::bgSpriteMoveFinished()
+void SnowNight::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doHeavySnowDayTime(false);
+    WeatherEffectsUtils::doSnowNight(isPlaySound);
 }
 
-void HeavySnowNight::onExit()
+void SnowNight::onExit()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
@@ -78,7 +78,7 @@ void HeavySnowNight::onExit()
     }
 }
 
-void HeavySnowNight::onEnterTransitionDidFinish()
+void SnowNight::onEnterTransitionDidFinish()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(

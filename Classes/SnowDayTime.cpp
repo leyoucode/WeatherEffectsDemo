@@ -1,24 +1,24 @@
 //
-//  LightSnowNight.cpp
+//  LightSnowDayTime.cpp
 //  WeatherEffectsDemo
 //
 //  Created by liu wei on 4/10/14.
 //
 //
 
-#include "LightSnowNight.h"
+#include "SnowDayTime.h"
 #import "WeatherEffectsUtils.h"
 #import "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
-CCScene* LightSnowNight::scene()
+CCScene* SnowDayTime::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    LightSnowNight *layer = LightSnowNight::create();
+    SnowDayTime *layer = SnowDayTime::create();
     layer->setTag(LAYER_TAG);
     // add layer as a child to scene
     scene->addChild(layer);
@@ -28,7 +28,7 @@ CCScene* LightSnowNight::scene()
 }
 
 // on "init" you need to initialize your instance
-bool LightSnowNight::init()
+bool SnowDayTime::init()
 {
     // 1. super init first
     if ( !CCLayer::init() )
@@ -38,7 +38,7 @@ bool LightSnowNight::init()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     
-    CCSprite *bgSprite = CCSprite::create("ld_bg_snow_night.jpg");//
+    CCSprite *bgSprite = CCSprite::create("ld_bg_snow_day_time.jpg");//
     float bgSpritespx = bgSprite->getTextureRect().getMaxX();
     float bgSpritespy = bgSprite->getTextureRect().getMaxY();
     // position the sprite on the center of the screen
@@ -50,7 +50,7 @@ bool LightSnowNight::init()
     
     //背景移动
     CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(LightSnowNight::bgSpriteMoveFinished));
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SnowDayTime::bgSpriteMoveFinished));
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
     
     float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
@@ -65,12 +65,12 @@ bool LightSnowNight::init()
     return true;
 }
 
-void LightSnowNight::bgSpriteMoveFinished()
+void SnowDayTime::bgSpriteMoveFinished()
 {
-    WeatherEffectsUtils::doLightSnowNight(isPlaySound);
+    WeatherEffectsUtils::doSnowDayTime(isPlaySound);
 }
 
-void LightSnowNight::onExit()
+void SnowDayTime::onExit()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
@@ -78,7 +78,7 @@ void LightSnowNight::onExit()
     }
 }
 
-void LightSnowNight::onEnterTransitionDidFinish()
+void SnowDayTime::onEnterTransitionDidFinish()
 {
     if (isPlaySound) {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(

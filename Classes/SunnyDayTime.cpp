@@ -36,104 +36,91 @@ bool SunnyDayTime::init()
         return false;
     }
     
-    //CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    //CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-    
-    CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
+    winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
-    CCSprite *bgSprite = CCSprite::create("ld_bg_fine_day.jpg");
-    float bgSpritespx = bgSprite->getTextureRect().getMaxX();
-    float bgSpritespy = bgSprite->getTextureRect().getMaxY();
-    // position the sprite on the center of the screen
-    bgSprite->setPosition(ccp(0,size.height/2));
-    bgSprite->setScaleX(size.width/bgSpritespx*2);
-    bgSprite->setScaleY(size.height/bgSpritespy);
-    // add the sprite as a child to this layer
-    this->addChild(bgSprite, 0);
+    bgTexture = CCTextureCache::sharedTextureCache()->addImage("ld_bg_fine_day.jpg");
+    this->moveBackgroundSprite(NULL);
     
-    //背景移动
-    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SunnyDayTime::bgSpriteMoveFinished));
-    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
-    
-    float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
+    float scale = winSize.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
     //太阳图片
     CCSprite *sunSprite = CCSprite::create("sun_small.png");
     sunSprite->setTag(1);
     sunSprite->setScale(scale);
-    sunSprite->setPosition(ccp(size.width- 100, size.height- 100));
-    sunSpriteOpacity = sunSprite->getOpacity();
+    sunSprite->setPosition(ccp(winSize.width- sunSprite->getTextureRect().getMaxX(), winSize.height- sunSprite->getTextureRect().getMaxY()));
     this->addChild(sunSprite);
     //太阳若隐若现效果
-    this->schedule(schedule_selector(SunnyDayTime::changeSunAlpha), 0.1f);
-    
+    CCFadeTo *fadeToMix = CCFadeTo::create(1, 200);//0 – totally transparent, 255 – opaque
+    CCFadeTo *fadeToMax = CCFadeTo::create(1, 255);
+    CCActionInterval *sunFadeDelayTime = CCDelayTime::create(4);
+    sunSprite->runAction(CCRepeatForever::create(CCSequence::create(sunFadeDelayTime,fadeToMix,fadeToMax,NULL)));
+
     //太阳光柱图片
     CCSprite *sunshineSprite = CCSprite::create("sunshine.png");
     sunshineSprite->setScale(scale);
-    sunshineSprite->setPosition(ccp(size.width- 100, size.height- 100));
+    sunshineSprite->setPosition(ccp(winSize.width- sunSprite->getTextureRect().getMaxX(), winSize.height- sunSprite->getTextureRect().getMaxY()));
     this->addChild(sunshineSprite);
+    sunshineSprite->setOpacity(0);
     
-    CCFiniteTimeAction *rot1 = CCRotateTo::create(26.0f, 180);
-    CCFiniteTimeAction *rot2 = CCRotateTo::create(26.0f, 360);
-    CCFadeOut * fadeOut=CCFadeOut::create(13.0f);
-    CCFadeIn * fadeIn=CCFadeIn::create(13.0f);
     //太阳光柱旋转动画
-    sunshineSprite->runAction(CCRepeatForever::create(CCSequence::create(rot1,rot2,NULL)));
-    //太阳光柱淡入淡出
-    sunshineSprite->runAction(CCRepeatForever::create(CCSequence::create(fadeOut,fadeIn,NULL)));
+    CCFadeOut * fadeOut=CCFadeOut::create(5.0f);
+    CCFadeIn * fadeIn=CCFadeIn::create(5.0f);
+    CCActionInterval *sunshineFadeDelayTime1 = CCDelayTime::create(40);
+    CCActionInterval *sunshineFadeDelayTime2 = CCDelayTime::create(130);
     
+    CCRotateBy* actionSpin = CCRotateBy::create(180.0f,360);
+    sunshineSprite->runAction(CCRepeatForever::create(CCSpawn::create(CCSequence::create(actionSpin,NULL),CCSequence::create(fadeIn,sunshineFadeDelayTime1,fadeOut,sunshineFadeDelayTime2,NULL),NULL)));
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("bird.wav");//欲加载鸟鸣声
     return true;
 }
 
-//当背景图片移动完毕 再次切换到当前场景
-void SunnyDayTime::bgSpriteMoveFinished()
+//移动背景图片
+void SunnyDayTime::moveBackgroundSprite(CCNode *sender)
 {
-    WeatherEffectsUtils::doSunnyDayTime(isPlaySound);
-}
 
-
-//改变太阳图片的Alpha值 实现太阳若影若现的效果
-void SunnyDayTime::changeSunAlpha()
-{
+    int zorder = 0;
     
-    CCSprite  *sunSprite = (CCSprite*)this->getChildByTag(1);
-    //0 – totally transparent, 255 – opaque
-    
-    if (isSunSpriteOpacityAdd) {
-        sunSpriteOpacity = sunSpriteOpacity + 1;
-    }else{
-        sunSpriteOpacity = sunSpriteOpacity - 1;
+    if (sender != NULL) {
+        zorder = sender->getZOrder();
+        sender->runAction(CCSequence::create(CCFadeOut::create(4),CCRemoveSelf::create(),NULL));
     }
     
-    if (sunSpriteOpacity >= 255) {
-        sunSpriteOpacity = 255;
-        isSunSpriteOpacityAdd = false;
-    }else if(sunSpriteOpacity <= 220){
-        sunSpriteOpacity = 220;
-        isSunSpriteOpacityAdd = true;
-    }
-    sunSprite -> setOpacity(sunSpriteOpacity);
+    //创建背景精灵
+    CCSprite *bgSprite = CCSprite::createWithTexture(bgTexture);
+    float bgSpritespx = bgTexture->getContentSize().width;
+    float bgSpritespy = bgTexture->getContentSize().height;
+    //设置精灵位置
+    bgSprite->setPosition(ccp(0,winSize.height/2));
+    bgSprite->setScaleX(winSize.width/bgSpritespx*2);//宽度放大2倍
+    bgSprite->setScaleY(winSize.height/bgSpritespy);
+    
+    this->addChild(bgSprite, zorder-1);
+    
+    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)winSize.width/BACKGROUND_MOVE_SPEED,ccp(winSize.width, winSize.height/2) );
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SunnyDayTime::moveBackgroundSprite));
+    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
     
 }
+
 
 void SunnyDayTime::onExit()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopAllEffects();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopEffect(birdSound);
 }
 
 void SunnyDayTime::onEnterTransitionDidFinish()
 {
-    CCActionInterval *birdcallDelayTime = CCDelayTime::create(10);
-    CCActionInstant *birdcallcallFunc = CCCallFuncN::create(this, callfuncN_selector(SunnyDayTime::playBirdcall));
-    this->runAction(CCRepeatForever::create(CCSequence::create(birdcallcallFunc,birdcallDelayTime,NULL)));
+    if (isPlaySound) {
+        CCActionInterval *birdcallDelayTime = CCDelayTime::create(10);
+        CCActionInstant *birdcallcallFunc = CCCallFuncN::create(this, callfuncN_selector(SunnyDayTime::playBirdcall));
+        this->runAction(CCRepeatForever::create(CCSequence::create(birdcallcallFunc,birdcallDelayTime,NULL)));
+    }
 }
 
 void SunnyDayTime::playBirdcall(CCNode *node)
 {
-    if (isPlaySound) {
-        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-                                                                              "bird.wav", false);
-    }
+    
+       birdSound = CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("bird.wav", false);
+   
 }

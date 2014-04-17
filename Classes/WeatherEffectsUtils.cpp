@@ -10,23 +10,40 @@
 #import "cocos2d.h"
 #import "ThunderShowerDayTime.h"
 #import "ThunderShowerNight.h"
-#import "HeavyRainDayTime.h"
-#import "HeavyRainNight.h"
-#import "LightRainDayTime.h"
-#import "LightRainNight.h"
-#import "HeavySnowDayTime.h"
-#import "HeavySnowNight.h"
-#import "LightSnowDayTime.h"
-#import "LightSnowNight.h"
+#import "RainDayTime.h"
+#import "RainNight.h"
+#import "SnowDayTime.h"
+#import "SnowNight.h"
 #import "SunnyNight.h"
 #import "SunnyDayTime.h"
 #import "CloudyDayTime.h"
 #import "CloudyNight.h"
-#import "WindyDayTime.h"
-#import "WindyNight.h"
 
 
 USING_NS_CC;
+
+//============================================================晴天=================
+
+//晴天白天
+void WeatherEffectsUtils::doSunnyDayTime(bool isPlaySound)
+{
+    
+    CCScene *scene = SunnyDayTime::scene();
+    SunnyDayTime *layer  = (SunnyDayTime*)scene->getChildByTag(LAYER_TAG);
+    layer->isPlaySound = isPlaySound;
+    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
+}
+
+//晴天晚上
+void WeatherEffectsUtils::doSunnyNight(bool isPlaySound)
+{
+    CCScene *scene = SunnyNight::scene();
+    SunnyNight *layer  = (SunnyNight*)scene->getChildByTag(LAYER_TAG);
+    layer->isPlaySound = isPlaySound;
+    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
+}
+
+//============================================================雨天=================
 
 // 雷阵雨白天
 void WeatherEffectsUtils::doThunderShowerDayTime(bool isPlaySound)
@@ -45,86 +62,44 @@ void WeatherEffectsUtils::doThunderShowerNight(bool isPlaySound)
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
 }
 
-// 大雨白天
-void WeatherEffectsUtils::doHeavyRainDayTime(bool isPlaySound)
+// 雨白天
+void WeatherEffectsUtils::doRainDayTime(bool isPlaySound)
 {
-    CCScene *scene = HeavyRainDayTime::scene();
-    HeavyRainDayTime *layer  = (HeavyRainDayTime*)scene->getChildByTag(LAYER_TAG);
+    CCScene *scene = RainDayTime::scene();
+    RainDayTime *layer  = (RainDayTime*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
 }
-// 大雨晚上
-void WeatherEffectsUtils::doHeavyRainNight(bool isPlaySound){
-    CCScene *scene = HeavyRainNight::scene();
-    HeavyRainNight *layer  = (HeavyRainNight*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-// 小雨白天
-void WeatherEffectsUtils::doLightRainDayTime(bool isPlaySound)
+// 雨晚上
+void WeatherEffectsUtils::doRainNight(bool isPlaySound)
 {
-    CCScene *scene = LightRainDayTime::scene();
-    LightRainDayTime *layer  = (LightRainDayTime*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-// 小雨晚上
-void WeatherEffectsUtils::doLightRainNight(bool isPlaySound)
-{
-    CCScene *scene = LightRainNight::scene();
-    LightRainNight *layer  = (LightRainNight*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-//大雪白天
-void WeatherEffectsUtils::doHeavySnowDayTime(bool isPlaySound)
-{
-    CCScene *scene = HeavySnowDayTime::scene();
-    HeavySnowDayTime *layer  = (HeavySnowDayTime*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-//大雪晚上
-void WeatherEffectsUtils::doHeavySnowNight(bool isPlaySound){
-    CCScene *scene = HeavySnowNight::scene();
-    HeavySnowNight *layer  = (HeavySnowNight*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-//小雪白天
-void WeatherEffectsUtils::doLightSnowDayTime(bool isPlaySound)
-{
-    CCScene *scene = LightSnowDayTime::scene();
-    LightSnowDayTime *layer  = (LightSnowDayTime*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-//小雪晚上
-void WeatherEffectsUtils::doLightSnowNight(bool isPlaySound)
-{
-    CCScene *scene = LightSnowNight::scene();
-    LightSnowNight *layer  = (LightSnowNight*)scene->getChildByTag(LAYER_TAG);
+    CCScene *scene = RainNight::scene();
+    RainNight *layer  = (RainNight*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
 }
 
-//晴天晚上
-void WeatherEffectsUtils::doSunnyNight(bool isPlaySound)
+ //============================================================雪天=================
+
+//雪白天
+void WeatherEffectsUtils::doSnowDayTime(bool isPlaySound)
 {
-    CCScene *scene = SunnyNight::scene();
-    SunnyNight *layer  = (SunnyNight*)scene->getChildByTag(LAYER_TAG);
+    CCScene *scene = SnowDayTime::scene();
+    SnowDayTime *layer  = (SnowDayTime*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
 }
-//晴天白天
-void WeatherEffectsUtils::doSunnyDayTime(bool isPlaySound)
+//雪晚上
+void WeatherEffectsUtils::doSnowNight(bool isPlaySound)
 {
-    
-    CCScene *scene = SunnyDayTime::scene();
-    SunnyDayTime *layer  = (SunnyDayTime*)scene->getChildByTag(LAYER_TAG);
+    CCScene *scene = SnowNight::scene();
+    SnowNight *layer  = (SnowNight*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
 }
+
+//============================================================多云 =================
+
 //多云白天
 void WeatherEffectsUtils::doCloudyDayTime(bool isPlaySound)
 {
@@ -140,19 +115,4 @@ void WeatherEffectsUtils::doCloudyNight(bool isPlaySound)
     CloudyNight *layer  = (CloudyNight*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-
-//大风白天
-void WeatherEffectsUtils::doWindyDayTime(bool isPlaySound)
-{
-    CCScene *scene = WindyDayTime::scene();
-    WindyDayTime *layer  = (WindyDayTime*)scene->getChildByTag(LAYER_TAG);
-    layer->isPlaySound = isPlaySound;
-    CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
-}
-
-//大风晚上
-void WeatherEffectsUtils::doWindyNight(bool isPlaySound)
-{
-
 }

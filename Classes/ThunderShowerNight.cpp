@@ -55,7 +55,7 @@ bool ThunderShowerNight::init()
     
     float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
-    CCParticleSystemQuad *rainEffect = CCParticleSystemQuad::create("heavy_rain.plist");
+    CCParticleSystemQuad *rainEffect = CCParticleSystemQuad::create("rain.plist");
     //emitter1->setStartColor(ccc4f(1,0,0,1));
     //emitter1->setBlendAdditive(false);
     
