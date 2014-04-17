@@ -11,10 +11,16 @@
 
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
+USING_NS_CC;
 
 class SnowDayTime : public cocos2d::CCLayer
 {
 public:
+    
+    CCSize winSize;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
     
     //是否播放声音
     bool isPlaySound;
@@ -32,7 +38,7 @@ public:
     CREATE_FUNC(SnowDayTime);
     
 private:
-    virtual void bgSpriteMoveFinished();
+    virtual void moveBackgroundSprite(CCNode *sender);
 };
 
 #endif

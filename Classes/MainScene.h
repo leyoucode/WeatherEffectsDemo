@@ -1,5 +1,6 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+
+#ifndef WeatherEffectsDemo_MainScene_h
+#define WeatherEffectsDemo_MainScene_h
 
 #include "cocos2d.h"
 

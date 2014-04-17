@@ -11,7 +11,7 @@
 
 #define TRANSACTION_DURATION 0.8f
 #define LAYER_TAG -999
-#define BACKGROUND_MOVE_SPEED 5 //70
+#define BACKGROUND_MOVE_SPEED 70 //5 
 
 //daytime night
 

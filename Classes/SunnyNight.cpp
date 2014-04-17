@@ -61,7 +61,33 @@ bool SunnyNight::init()
     CCActionInterval *sunFadeDelayTime = CCDelayTime::create(4);
     moonSprite->runAction(CCRepeatForever::create(CCSequence::create(sunFadeDelayTime,fadeToMix,fadeToMax,NULL)));
     
+    //流星
+    CCSprite *meteor = CCSprite::create("meteor.png");
+    meteor->setScale(scale);
+    meteor->setRotation(-45);
+    meteor->setPosition(ccp(winSize.width*1.4,winSize.height));
+    this->addChild(meteor);
+    
+    CCMoveTo *meteorMove = CCMoveTo::create(4, ccp(-100, 100));
+    CCDelayTime *meteorDelayTime = CCDelayTime::create(10);
+    CCCallFuncN *meteorCallFunc = CCCallFuncN::create(this, callfuncN_selector(SunnyNight::meteorMoveDone));
+    
+    meteor->runAction(CCSequence::create(meteorDelayTime,meteorMove,meteorCallFunc,NULL));
+    
+    
     return true;
+}
+
+void SunnyNight::meteorMoveDone(CCNode *node)
+{
+    CCSprite *meteor = (CCSprite*)node;
+    meteor->setPosition(ccp(winSize.width*1.4,winSize.height));
+    CCMoveTo *meteorMove = CCMoveTo::create(4, ccp(-100, 100));
+    CCDelayTime *meteorDelayTime = CCDelayTime::create(10);
+    CCCallFuncN *meteorCallFunc = CCCallFuncN::create(this, callfuncN_selector(SunnyNight::meteorMoveDone));
+    
+    meteor->runAction(CCSequence::create(meteorDelayTime,meteorMove,meteorCallFunc,NULL));
+    
 }
 
 //当背景图片移动完毕 再次切换到当前场景

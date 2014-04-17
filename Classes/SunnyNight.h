@@ -38,5 +38,7 @@ public:
 private:
     
     virtual void moveBackgroundSprite(CCNode *node);
+    
+    virtual void meteorMoveDone(CCNode *node);
 };
 #endif

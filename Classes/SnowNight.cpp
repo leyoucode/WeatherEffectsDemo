@@ -36,27 +36,15 @@ bool SnowNight::init()
         return false;
     }
     
-    CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
+    winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
+    //background image
+    bgTexture = CCTextureCache::sharedTextureCache()->addImage("ld_bg_snow_night.jpg");
+    this->moveBackgroundSprite(NULL);
     
-    CCSprite *bgSprite = CCSprite::create("ld_bg_snow_night.jpg");//
-    float bgSpritespx = bgSprite->getTextureRect().getMaxX();
-    float bgSpritespy = bgSprite->getTextureRect().getMaxY();
-    // position the sprite on the center of the screen
-    bgSprite->setPosition(ccp(0,size.height/2));
-    bgSprite->setScaleX(size.width/bgSpritespx*2);
-    bgSprite->setScaleY(size.height/bgSpritespy);
-    // add the sprite as a child to this layer
-    this->addChild(bgSprite, 0);
+    float scale = winSize.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
-    //背景移动
-    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SnowNight::bgSpriteMoveFinished));
-    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
-    
-    float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
-    
-    CCParticleSystemQuad *snowEffect = CCParticleSystemQuad::create("light_snow.plist");
-    snowEffect->setPosition(ccp(size.width/2-30, size.height));
+    CCParticleSystemQuad *snowEffect = CCParticleSystemQuad::create("snow.plist");
+    snowEffect->setPosition(ccp(winSize.width/2-30, winSize.height));
     //rainEffect->setAnchorPoint(Point(0,0));
     snowEffect->setScale(scale);
     
@@ -65,9 +53,32 @@ bool SnowNight::init()
     return true;
 }
 
-void SnowNight::bgSpriteMoveFinished()
+//移动背景图片
+void SnowNight::moveBackgroundSprite(CCNode *sender)
 {
-    WeatherEffectsUtils::doSnowNight(isPlaySound);
+    
+    int zorder = 0;
+    
+    if (sender != NULL) {
+        zorder = sender->getZOrder();
+        sender->runAction(CCSequence::create(CCFadeOut::create(4),CCRemoveSelf::create(),NULL));
+    }
+    
+    //创建背景精灵
+    CCSprite *bgSprite = CCSprite::createWithTexture(bgTexture);
+    float bgSpritespx = bgTexture->getContentSize().width;
+    float bgSpritespy = bgTexture->getContentSize().height;
+    //设置精灵位置
+    bgSprite->setPosition(ccp(0,winSize.height/2));
+    bgSprite->setScaleX(winSize.width/bgSpritespx*2);//宽度放大2倍
+    bgSprite->setScaleY(winSize.height/bgSpritespy);
+    
+    this->addChild(bgSprite, zorder-1);
+    
+    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)winSize.width/BACKGROUND_MOVE_SPEED,ccp(winSize.width, winSize.height/2) );
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SnowNight::moveBackgroundSprite));
+    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
+    
 }
 
 void SnowNight::onExit()

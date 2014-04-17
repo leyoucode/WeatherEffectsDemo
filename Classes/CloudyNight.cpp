@@ -36,62 +36,54 @@ bool CloudyNight::init()
     }
     
     
-    CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
+    winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
-    CCSprite *bgSprite = CCSprite::create("ld_bg_cloudy_night.jpg");
-    float bgSpritespx = bgSprite->getTextureRect().getMaxX();
-    float bgSpritespy = bgSprite->getTextureRect().getMaxY();
-    // position the sprite on the center of the screen
-    bgSprite->setPosition(ccp(0,size.height/2));
-    bgSprite->setScaleX(size.width/bgSpritespx*2);
-    bgSprite->setScaleY(size.height/bgSpritespy);
-    // add the sprite as a child to this layer
-    this->addChild(bgSprite, 0);
+    bgTexture = CCTextureCache::sharedTextureCache()->addImage("ld_bg_cloudy_night.jpg");
+    this->moveBackgroundSprite(NULL);
     
-    //背景移动
-    CCFiniteTimeAction* bgActionMove = CCMoveTo::create( (float)size.width/3,ccp(size.width, size.height/2) );
-    CCFiniteTimeAction* bgActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::bgSpriteMoveFinished));
-    bgSprite->runAction( CCSequence::create(bgActionMove,bgActionMoveDone, NULL) );
-    
-    float scale = size.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
+    scale = winSize.width / 320.0f;//缩放比率 因为我是按照320*480设计的粒子效果
     
     //云朵图片1
-    CCSprite *cloud1Sprite = CCSprite::create("overcast_cloud1.png");
-    cloud1Sprite->setPosition(ccp(size.width/2, size.height-100));
+    CCSprite *cloud1Sprite = CCSprite::create("dark_clouds_1.png");
+    cloud1Sprite->setPosition(ccp(winSize.width/2, winSize.height-50));
     cloud1Sprite->setScale(scale);
+    //cloud1Sprite->setOpacity(103.0);
     this->addChild(cloud1Sprite);
     //云层1移动
-    CCFiniteTimeAction* cloud1ActionMove = CCMoveTo::create( (float)size.width/5,ccp(size.width+cloud1Sprite->getTextureRect().getMaxX(), size.height-100) );
+    CCFiniteTimeAction* cloud1ActionMove = CCMoveTo::create( (float)winSize.width/10,ccp(winSize.width+cloud1Sprite->getTextureRect().getMaxX(), winSize.height-100) );
     CCFiniteTimeAction* cloud1ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::cloudy1SpriteMoveFinished));
     cloud1Sprite->runAction( CCSequence::create(cloud1ActionMove,cloud1ActionMoveDone, NULL) );
     
     //云朵图片2
-    CCSprite *cloud2Sprite = CCSprite::create("overcast_cloud2.png");
-    cloud2Sprite->setPosition(ccp(size.width/2-150, size.height-100));
+    CCSprite *cloud2Sprite = CCSprite::create("dark_clouds_2.png");
+    cloud2Sprite->setPosition(ccp(0, winSize.height-100));
     cloud2Sprite->setScale(scale);
+    //cloud2Sprite->setOpacity(103.0);
     this->addChild(cloud2Sprite);
     //云层2移动
-    CCFiniteTimeAction* cloud2ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud2Sprite->getTextureRect().getMaxX(), size.height-100) );
+    CCFiniteTimeAction* cloud2ActionMove = CCMoveTo::create( (float)winSize.width/6,ccp(winSize.width+cloud2Sprite->getTextureRect().getMaxX(), winSize.height-100) );
     CCFiniteTimeAction* cloud2ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::cloudy2SpriteMoveFinished));
     cloud2Sprite->runAction( CCSequence::create(cloud2ActionMove,cloud2ActionMoveDone, NULL) );
     
     //云朵图片3
-    CCSprite *cloud3Sprite = CCSprite::create("overcast_cloud1.png");
-    cloud3Sprite->setPosition(ccp(size.width/2-300, size.height-100));
+    CCSprite *cloud3Sprite = CCSprite::create("dark_clouds_3.png");
+    cloud3Sprite->setPosition(ccp(winSize.width/2*-1, winSize.height-150));
     cloud3Sprite->setScale(scale);
+    //cloud3Sprite->setOpacity(103.0);
     this->addChild(cloud3Sprite);
     //云层3移动
-    CCFiniteTimeAction* cloud3ActionMove = CCMoveTo::create( (float)size.width/5,ccp(size.width+cloud3Sprite->getTextureRect().getMaxX(), size.height-100) );
+    CCFiniteTimeAction* cloud3ActionMove = CCMoveTo::create( (float)winSize.width/4,ccp(winSize.width+cloud3Sprite->getTextureRect().getMaxX(), winSize.height-100) );
     CCFiniteTimeAction* cloud3ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::cloudy3SpriteMoveFinished));
     cloud3Sprite->runAction( CCSequence::create(cloud3ActionMove,cloud3ActionMoveDone, NULL) );
     
     //云朵图片4
-    CCSprite *cloud4Sprite = CCSprite::create("overcast_cloud2.png");
-    cloud4Sprite->setPosition(ccp(size.width/2-450, size.height-100));
+    CCSprite *cloud4Sprite = CCSprite::create("dark_clouds_4.png");
+    cloud4Sprite->setPosition(ccp(winSize.width*-1, winSize.height-200));
     cloud4Sprite->setScale(scale);
+    //cloud4Sprite->setOpacity(103.0);
     this->addChild(cloud4Sprite);
     //云层4移动
-    CCFiniteTimeAction* cloud4ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+cloud4Sprite->getTextureRect().getMaxX(), size.height-100) );
+    CCFiniteTimeAction* cloud4ActionMove = CCMoveTo::create( (float)winSize.width/8,ccp(winSize.width+cloud4Sprite->getTextureRect().getMaxX(), winSize.height-100) );
     CCFiniteTimeAction* cloud4ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::cloudy4SpriteMoveFinished));
     cloud4Sprite->runAction( CCSequence::create(cloud4ActionMove,cloud4ActionMoveDone, NULL) );
     
@@ -146,8 +138,28 @@ void CloudyNight::cloudy4SpriteMoveFinished(CCNode *sender)
     cloud1Sprite->runAction( CCSequence::create(cloud1ActionMove,cloud1ActionMoveDone, NULL) );
 }
 
-//当背景图片移动完毕 再次切换到当前场景
-void CloudyNight::bgSpriteMoveFinished()
+void CloudyNight::moveBackgroundSprite(CCNode *sender)
 {
-    WeatherEffectsUtils::doCloudyNight(isPlaySound);
+    int zorder = 0;
+    
+    if (sender != NULL) {
+        zorder = sender->getZOrder();
+        sender->runAction(CCSequence::create(CCFadeOut::create(4),CCRemoveSelf::create(),NULL));
+    }
+    
+    //创建背景精灵
+    CCSprite *bgSprite = CCSprite::createWithTexture(bgTexture);
+    float bgSpritespx = bgTexture->getContentSize().width;
+    float bgSpritespy = bgTexture->getContentSize().height;
+    //设置精灵位置
+    bgSprite->setPosition(ccp(0,winSize.height/2));
+    bgSprite->setScaleX(winSize.width/bgSpritespx*2);//宽度放大2倍
+    bgSprite->setScaleY(winSize.height/bgSpritespy);
+    
+    this->addChild(bgSprite, zorder-1);
+    
+    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)winSize.width/BACKGROUND_MOVE_SPEED,ccp(winSize.width, winSize.height/2) );
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(CloudyNight::moveBackgroundSprite));
+    bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
 }
+

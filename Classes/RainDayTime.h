@@ -10,10 +10,24 @@
 #define WeatherEffectsDemo_LightRainDayTime_h
 
 #include "cocos2d.h"
+USING_NS_CC;
 
 class RainDayTime : public cocos2d::CCLayer
 {
 public:
+    
+    CCSize winSize;
+    
+    float scale;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
+    
+    CCSprite *thunderlight1;
+    
+    CCSprite *thunderlight2;
+    
+    int thunderSound;//雷声
     
     //是否播放声音
     bool isPlaySound;
@@ -27,10 +41,16 @@ public:
     void onExit();
     void onEnterTransitionDidFinish();
     
-    virtual void bgSpriteMoveFinished();
-    
     // implement the "static node()" method manually
     CREATE_FUNC(RainDayTime);
+    
+private:
+    virtual void moveBackgroundSprite(CCNode *sender);
+    
+    virtual void cloudy1SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy2SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy3SpriteMoveFinished(CCNode *sender);
+    virtual void cloudy4SpriteMoveFinished(CCNode *sender);
 };
 
 

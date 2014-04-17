@@ -11,10 +11,18 @@
 
 #include "cocos2d.h"
 #import "WeatherEffectsUtils.h"
+USING_NS_CC;
 
 class CloudyDayTime : public cocos2d::CCLayer
 {
 public:
+    
+    CCSize winSize;
+    
+    float scale;
+    
+    //背景纹理图片
+    CCTexture2D *bgTexture;
     
     //是否播放声音
     bool isPlaySound;
@@ -30,7 +38,8 @@ public:
     
 private:
     
-    virtual void bgSpriteMoveFinished();
+    virtual void moveBackgroundSprite(CCNode *sender);
+    
     virtual void cloudy1SpriteMoveFinished(CCNode *sender);
     virtual void cloudy2SpriteMoveFinished(CCNode *sender);
     virtual void cloudy3SpriteMoveFinished(CCNode *sender);
