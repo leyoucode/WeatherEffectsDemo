@@ -36,6 +36,7 @@ bool ThunderShowerNight::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
     
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
@@ -252,4 +253,14 @@ void ThunderShowerNight::cloudy4SpriteMoveFinished(CCNode *sender)
     CCFiniteTimeAction* cloud1ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+bgSpritespx, size.height-50) );
     CCFiniteTimeAction* cloud1ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(ThunderShowerNight::cloudy1SpriteMoveFinished));
     cloud1Sprite->runAction( CCSequence::create(cloud1ActionMove,cloud1ActionMoveDone, NULL) );
+}
+
+void ThunderShowerNight::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void ThunderShowerNight::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
 }

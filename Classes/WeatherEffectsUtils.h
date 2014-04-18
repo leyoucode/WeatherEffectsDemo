@@ -54,6 +54,8 @@ public:
     //多云晚上
     static void doCloudyNight(bool isPlaySound);
     
+    static void android_back_click();
+    static void android_menu_click();
     
 };
 

@@ -7,6 +7,8 @@
 //
 
 #include "WeatherEffectsUtils.h"
+//#include <jni.h>
+//#include "platform/android/jni/JniHelper.h"
 #import "cocos2d.h"
 #import "ThunderShowerDayTime.h"
 #import "ThunderShowerNight.h"
@@ -21,6 +23,10 @@
 
 
 USING_NS_CC;
+
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+//#import "CallWeatherEffects.h"
+//#endif
 
 //============================================================晴天=================
 
@@ -115,4 +121,31 @@ void WeatherEffectsUtils::doCloudyNight(bool isPlaySound)
     CloudyNight *layer  = (CloudyNight*)scene->getChildByTag(LAYER_TAG);
     layer->isPlaySound = isPlaySound;
     CCDirector::sharedDirector()->replaceScene(CCTransitionCrossFade::create(TRANSACTION_DURATION, scene));
+}
+
+void WeatherEffectsUtils::android_back_click()
+{
+//	#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) //判断当前是否为Android平台
+//            JniMethodInfo minfo;//定义Jni函数信息结构体
+//            bool isHave = JniHelper::getStaticMethodInfo(minfo,"com/essilorchina/weather/CallWeatherEffects","back", "()V");
+//            if(isHave){
+//                CCLog("jni:android_back_click");
+//                minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+//            }else{
+//                CCLog("jni:android_back_click not found");
+//            }
+//	#endif
+}
+void WeatherEffectsUtils::android_menu_click()
+{
+//    #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) //判断当前是否为Android平台
+//        JniMethodInfo minfo;//定义Jni函数信息结构体
+//        bool isHave = JniHelper::getStaticMethodInfo(minfo,"com/essilorchina/weather/CallWeatherEffects","menu", "()V");
+//        if(isHave){
+//            CCLog("jni:android_menu_click");
+//            minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+//        }else{
+//            CCLog("jni:android_menu_click not found");
+//        }
+//    #endif
 }

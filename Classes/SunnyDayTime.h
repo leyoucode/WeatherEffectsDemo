@@ -37,6 +37,8 @@ public:
     
     void onExit();
     void onEnterTransitionDidFinish();
+    virtual void keyBackClicked();//Android 返回键
+    virtual void keyMenuClicked();//Android 菜单键
     
     // implement the "static node()" method manually
     CREATE_FUNC(SunnyDayTime);

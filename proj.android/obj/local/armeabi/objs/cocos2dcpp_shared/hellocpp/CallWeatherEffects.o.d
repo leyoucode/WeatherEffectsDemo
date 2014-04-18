@@ -207,14 +207,11 @@ obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/CallWeatherEffects.o: \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/jni/JniHelper.h \
  jni/../../Classes/ThunderShowerDayTime.h \
  jni/../../Classes/WeatherEffectsUtils.h \
- jni/../../Classes/ThunderShowerNight.h \
- jni/../../Classes/HeavyRainDayTime.h jni/../../Classes/HeavyRainNight.h \
- jni/../../Classes/LightRainDayTime.h jni/../../Classes/LightRainNight.h \
- jni/../../Classes/HeavySnowDayTime.h jni/../../Classes/HeavySnowNight.h \
- jni/../../Classes/LightSnowDayTime.h jni/../../Classes/LightSnowNight.h \
- jni/../../Classes/SunnyNight.h jni/../../Classes/SunnyDayTime.h \
- jni/../../Classes/CloudyDayTime.h jni/../../Classes/CloudyNight.h \
- jni/../../Classes/WindyDayTime.h jni/../../Classes/WindyNight.h
+ jni/../../Classes/ThunderShowerNight.h jni/../../Classes/RainDayTime.h \
+ jni/../../Classes/RainNight.h jni/../../Classes/SnowDayTime.h \
+ jni/../../Classes/SnowNight.h jni/../../Classes/SunnyNight.h \
+ jni/../../Classes/SunnyDayTime.h jni/../../Classes/CloudyDayTime.h \
+ jni/../../Classes/CloudyNight.h
 
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h:
 
@@ -632,21 +629,13 @@ jni/../../Classes/WeatherEffectsUtils.h:
 
 jni/../../Classes/ThunderShowerNight.h:
 
-jni/../../Classes/HeavyRainDayTime.h:
+jni/../../Classes/RainDayTime.h:
 
-jni/../../Classes/HeavyRainNight.h:
+jni/../../Classes/RainNight.h:
 
-jni/../../Classes/LightRainDayTime.h:
+jni/../../Classes/SnowDayTime.h:
 
-jni/../../Classes/LightRainNight.h:
-
-jni/../../Classes/HeavySnowDayTime.h:
-
-jni/../../Classes/HeavySnowNight.h:
-
-jni/../../Classes/LightSnowDayTime.h:
-
-jni/../../Classes/LightSnowNight.h:
+jni/../../Classes/SnowNight.h:
 
 jni/../../Classes/SunnyNight.h:
 
@@ -655,7 +644,3 @@ jni/../../Classes/SunnyDayTime.h:
 jni/../../Classes/CloudyDayTime.h:
 
 jni/../../Classes/CloudyNight.h:
-
-jni/../../Classes/WindyDayTime.h:
-
-jni/../../Classes/WindyNight.h:

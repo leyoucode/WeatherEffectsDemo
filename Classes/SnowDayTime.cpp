@@ -35,6 +35,8 @@ bool SnowDayTime::init()
     {
         return false;
     }
+    
+    this->setKeypadEnabled(true);
 
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
@@ -97,4 +99,13 @@ void SnowDayTime::onEnterTransitionDidFinish()
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
                                                                               "windy.mp3", true);
     }
+}
+void SnowDayTime::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void SnowDayTime::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
 }

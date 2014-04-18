@@ -35,6 +35,8 @@ bool SunnyNight::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
+    
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
     bgTexture = CCTextureCache::sharedTextureCache()->addImage("ld_bg_fine_day_night.jpg");
@@ -114,4 +116,14 @@ void SunnyNight::moveBackgroundSprite(CCNode *sender)
     CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)winSize.width/BACKGROUND_MOVE_SPEED,ccp(winSize.width, winSize.height/2) );
     CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this,callfuncN_selector(SunnyNight::moveBackgroundSprite));
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
+}
+
+void SunnyNight::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void SunnyNight::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
 }

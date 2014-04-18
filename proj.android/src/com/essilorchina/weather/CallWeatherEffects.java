@@ -1,47 +1,57 @@
 package com.essilorchina.weather;
 
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Looper;
+
 public class CallWeatherEffects {
 
-	//============雨天=================
-	// 雷阵雨白天
-	public static native void doThunderShowerDayTime(boolean isPlaySound);
-    // 雷阵雨晚上
-	public static native void doThunderShowerNight(boolean isPlaySound);
-    // 大雨白天
-	public static native void doHeavyRainDayTime(boolean isPlaySound);
-    // 大雨晚上
-	public static native void doHeavyRainNight(boolean isPlaySound);
-    // 小雨白天
-	public static native void doLightRainDayTime(boolean isPlaySound);
-    // 小雨晚上
-	public static native void doLightRainNight(boolean isPlaySound);
-    
-    //============雪天=================
-    //大雪白天
-	public static native void doHeavySnowDayTime(boolean isPlaySound);
-    //大雪晚上
-	public static native void doHeavySnowNight(boolean isPlaySound);
-    //小雪白天
-	public static native void doLightSnowDayTime(boolean isPlaySound);
-    //小雪晚上
-	public static native void doLightSnowNight(boolean isPlaySound);
-    
+	
     //============晴天=================
     //晴天白天
 	public static native void doSunnyDayTime(boolean isPlaySound);
     //晴天晚上
 	public static native void doSunnyNight(boolean isPlaySound);
     
-    //============多云=================
+    //============雨天=================
+    // 雷阵雨白天
+	public static native void doThunderShowerDayTime(boolean isPlaySound);
+    // 雷阵雨晚上
+	public static native void doThunderShowerNight(boolean isPlaySound);
+    // 雨白天
+	public static native void doRainDayTime(boolean isPlaySound);
+    // 雨晚上
+	public static native void doRainNight(boolean isPlaySound);
+    
+    
+    //============雪天=================
+    //雪白天
+	public static native void doSnowDayTime(boolean isPlaySound);
+    //雪晚上
+    public static native void doSnowNight(boolean isPlaySound);
+    
+    //============多云 =================
     //多云白天
-	public static native void doCloudyDayTime(boolean isPlaySound);
+    public static native void doCloudyDayTime(boolean isPlaySound);
     //多云晚上
-	public static native void doCloudyNight(boolean isPlaySound);
+    public static native void doCloudyNight(boolean isPlaySound);
+	
+    //Signature: ()V
+    public static void back()
+    {
+    	 System.out.println("=======>back");
+    	 
+ 	}
+    	 
     
-    //============ 大风================
-    //大风白天
-    public static native void doWindyDayTime(boolean isPlaySound);
-    
-    //大风晚上
-    public static native void doWindyNight(boolean isPlaySound);
+    //Signature: ()V
+    public static void menu()
+    {
+    	
+    		System.out.println("=======>menu");
+    }
 }

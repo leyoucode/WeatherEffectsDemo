@@ -35,6 +35,7 @@ bool CloudyDayTime::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
     
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
@@ -163,3 +164,12 @@ void CloudyDayTime::moveBackgroundSprite(CCNode *sender)
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
 }
 
+void CloudyDayTime::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void CloudyDayTime::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
+}

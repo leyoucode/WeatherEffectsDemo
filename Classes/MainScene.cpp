@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#import "WeatherEffectsUtils.h"
 
 USING_NS_CC;
 
@@ -27,6 +28,8 @@ bool MainScene::init()
         return false;
     }
 
+    this->setKeypadEnabled(true);
+    
     CCSize size = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
     CCSprite *bgSprite = CCSprite::create("ld_bg_fine_day.jpg");
@@ -40,5 +43,15 @@ bool MainScene::init()
     this->addChild(bgSprite, 0);
     
     return true;
+}
+
+void MainScene::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void MainScene::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
 }
 

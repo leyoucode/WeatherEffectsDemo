@@ -81,16 +81,16 @@ public class WeatherEffectsDemo extends Cocos2dxActivity{
 	       				CallWeatherEffects.doThunderShowerNight(true);
 	       				break;
 	       			case R.id.dybt:
-	       				CallWeatherEffects.doHeavyRainDayTime(true);
+	       				CallWeatherEffects.doRainDayTime(true);
 	       				break;
 	       			case R.id.dyws:
-	       				CallWeatherEffects.doHeavyRainNight(true);
+	       				CallWeatherEffects.doRainNight(true);
 	       				break;
 	       			case R.id.xybt:
-	       				CallWeatherEffects.doLightRainDayTime(true);
+	       				CallWeatherEffects.doRainDayTime(true);
 	       				break;
 	       			case R.id.xyws:
-	       				CallWeatherEffects.doLightRainNight(true);
+	       				CallWeatherEffects.doRainNight(true);
 	       				break;
 	       			case R.id.qtbt:
 	       				CallWeatherEffects.doSunnyDayTime(true);
@@ -104,23 +104,11 @@ public class WeatherEffectsDemo extends Cocos2dxActivity{
 	       			case R.id.duoyws:
 	       				CallWeatherEffects.doCloudyNight(true);
 	       				break;
-	       			case R.id.dfbt:
-	       				CallWeatherEffects.doWindyDayTime(true);
-	       				break;
-	       			case R.id.dfws:
-	       				CallWeatherEffects.doWindyNight(true);
-	       				break;
 	       			case R.id.dxbt:
-	       				CallWeatherEffects.doHeavySnowDayTime(true);
+	       				CallWeatherEffects.doSnowDayTime(true);
 	       				break;
 	       			case R.id.dxws:
-	       				CallWeatherEffects.doHeavySnowNight(true);
-	       				break;
-	       			case R.id.xxbt:
-	       				CallWeatherEffects.doLightSnowDayTime(true);
-	       				break;
-	       			case R.id.xxws:
-	       				CallWeatherEffects.doLightSnowNight(true);
+	       				CallWeatherEffects.doSnowNight(true);
 	       				break;
 
 	       			default:
@@ -141,6 +129,6 @@ public class WeatherEffectsDemo extends Cocos2dxActivity{
     }
 
     static {
-        System.loadLibrary("cocos2dcpp");
+        System.loadLibrary("ldweather");
     }     
 }

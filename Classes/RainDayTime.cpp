@@ -36,6 +36,7 @@ bool RainDayTime::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
     
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
@@ -190,4 +191,14 @@ void RainDayTime::cloudy4SpriteMoveFinished(CCNode *sender)
     CCFiniteTimeAction* cloud1ActionMove = CCMoveTo::create( (float)size.width/8,ccp(size.width+bgSpritespx, size.height-50) );
     CCFiniteTimeAction* cloud1ActionMoveDone = CCCallFuncN::create( this,callfuncN_selector(RainDayTime::cloudy1SpriteMoveFinished));
     cloud1Sprite->runAction( CCSequence::create(cloud1ActionMove,cloud1ActionMoveDone, NULL) );
+}
+
+void RainDayTime::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void RainDayTime::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
 }

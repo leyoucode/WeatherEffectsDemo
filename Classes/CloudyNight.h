@@ -34,6 +34,9 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::CCScene* scene();
     
+    virtual void keyBackClicked();//Android 返回键
+    virtual void keyMenuClicked();//Android 菜单键
+    
     // implement the "static node()" method manually
     CREATE_FUNC(CloudyNight);
     

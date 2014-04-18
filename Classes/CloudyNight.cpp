@@ -35,6 +35,7 @@ bool CloudyNight::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
     
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
@@ -163,3 +164,12 @@ void CloudyNight::moveBackgroundSprite(CCNode *sender)
     bgSprite->runAction( CCSequence::create(actionMove,actionMoveDone, NULL) );
 }
 
+void CloudyNight::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void CloudyNight::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
+}

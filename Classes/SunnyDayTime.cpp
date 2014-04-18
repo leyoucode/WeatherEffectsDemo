@@ -36,6 +36,8 @@ bool SunnyDayTime::init()
         return false;
     }
     
+    this->setKeypadEnabled(true);
+    
     winSize = CCDirector::sharedDirector()->getWinSize(); // 屏幕大小
     //background image
     bgTexture = CCTextureCache::sharedTextureCache()->addImage("ld_bg_fine_day.jpg");
@@ -122,6 +124,17 @@ void SunnyDayTime::onEnterTransitionDidFinish()
         this->runAction(CCRepeatForever::create(CCSequence::create(birdcallcallFunc,birdcallDelayTime,NULL)));
     }
 }
+
+void SunnyDayTime::keyBackClicked(){
+    CCLog("Android- KeyBackClicked!");
+    WeatherEffectsUtils::android_back_click();
+}
+
+void SunnyDayTime::keyMenuClicked(){
+    CCLog("Android- keyMenuClicked!");
+    WeatherEffectsUtils::android_menu_click();
+}
+
 
 void SunnyDayTime::playBirdcall(CCNode *node)
 {

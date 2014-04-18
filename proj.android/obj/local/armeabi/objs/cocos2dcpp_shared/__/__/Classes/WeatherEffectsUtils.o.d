@@ -1,18 +1,23 @@
 obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/WeatherEffectsUtils.o: \
  jni/../../Classes/WeatherEffectsUtils.cpp \
  jni/../../Classes/WeatherEffectsUtils.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/actions/CCAction.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCObject.h \
- /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCDataVisitor.h \
+ /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/jni.h \
+ /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
+ /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/jni/JniHelper.h \
+ /Users/liuwei/Documents/Development/Android/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformMacros.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
- /Users/liuwei/Documents/Development/Android/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/actions/CCAction.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCObject.h \
+ /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCDataVisitor.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCGeometry.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCObject.h \
  /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h \
@@ -205,28 +210,25 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/WeatherEffectsUtils.o: \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/component/CCComponent.h \
  /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/support/component/CCComponentContainer.h \
  jni/../../Classes/ThunderShowerDayTime.h \
- jni/../../Classes/ThunderShowerNight.h \
- jni/../../Classes/HeavyRainDayTime.h jni/../../Classes/HeavyRainNight.h \
- jni/../../Classes/LightRainDayTime.h jni/../../Classes/LightRainNight.h \
- jni/../../Classes/HeavySnowDayTime.h jni/../../Classes/HeavySnowNight.h \
- jni/../../Classes/LightSnowDayTime.h jni/../../Classes/LightSnowNight.h \
- jni/../../Classes/SunnyNight.h jni/../../Classes/SunnyDayTime.h \
- jni/../../Classes/CloudyDayTime.h jni/../../Classes/CloudyNight.h \
- jni/../../Classes/WindyDayTime.h jni/../../Classes/WindyNight.h
+ jni/../../Classes/ThunderShowerNight.h jni/../../Classes/RainDayTime.h \
+ jni/../../Classes/RainNight.h jni/../../Classes/SnowDayTime.h \
+ jni/../../Classes/SnowNight.h jni/../../Classes/SunnyNight.h \
+ jni/../../Classes/SunnyDayTime.h jni/../../Classes/CloudyDayTime.h \
+ jni/../../Classes/CloudyNight.h
 
 jni/../../Classes/WeatherEffectsUtils.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h:
+/Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/jni.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h:
+/Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
+/Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/actions/CCAction.h:
+/Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCObject.h:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/jni/JniHelper.h:
 
-/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCDataVisitor.h:
+/Users/liuwei/Documents/Development/Android/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string:
 
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformMacros.h:
 
@@ -234,11 +236,21 @@ jni/../../Classes/WeatherEffectsUtils.h:
 
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
 
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/CCPlatformConfig.h:
+
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/platform/android/CCPlatformDefine.h:
 
 /Users/liuwei/Documents/Development/Android/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
 
-/Users/liuwei/Documents/Development/Android/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string:
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/cocos2d.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/include/ccConfig.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/actions/CCAction.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCObject.h:
+
+/Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCDataVisitor.h:
 
 /Users/liuwei/Documents/Development/cocos2d-x-2.2.3/cocos2dx/cocoa/CCGeometry.h:
 
@@ -626,21 +638,13 @@ jni/../../Classes/ThunderShowerDayTime.h:
 
 jni/../../Classes/ThunderShowerNight.h:
 
-jni/../../Classes/HeavyRainDayTime.h:
+jni/../../Classes/RainDayTime.h:
 
-jni/../../Classes/HeavyRainNight.h:
+jni/../../Classes/RainNight.h:
 
-jni/../../Classes/LightRainDayTime.h:
+jni/../../Classes/SnowDayTime.h:
 
-jni/../../Classes/LightRainNight.h:
-
-jni/../../Classes/HeavySnowDayTime.h:
-
-jni/../../Classes/HeavySnowNight.h:
-
-jni/../../Classes/LightSnowDayTime.h:
-
-jni/../../Classes/LightSnowNight.h:
+jni/../../Classes/SnowNight.h:
 
 jni/../../Classes/SunnyNight.h:
 
@@ -649,7 +653,3 @@ jni/../../Classes/SunnyDayTime.h:
 jni/../../Classes/CloudyDayTime.h:
 
 jni/../../Classes/CloudyNight.h:
-
-jni/../../Classes/WindyDayTime.h:
-
-jni/../../Classes/WindyNight.h:
